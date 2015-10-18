@@ -1,0 +1,12 @@
+.custom_border{
+	border: 1px solid #F0F0F0 ;
+}
+.post_box{
+	border: 1px solid #F0F0F0 ;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	background-color: white;
+}
+.custom_color{
+	background-color:#F8F8F8 ;
+}
