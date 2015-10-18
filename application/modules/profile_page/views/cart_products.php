@@ -1,5 +1,5 @@
 	<script src="<?php echo base_url(); ?>/js/profile_page.js"></script>
-<div class="col-xs-13 col-sm-13 col-md-13 col-lg-13">
+<div class="col-xs-24 col-sm-24 col-md-13">
 <div id="main">
  
     <div class="card hovercard">
