@@ -22,16 +22,30 @@ echo '<div class="row post_box" >
 			 	<div class="row">
 			 	<br>
 				 	<ul class="list-inline list-images">
-					  <li><img src="'.base_url().'/images/flaticon/upload/actor2.png"></li>
-					  <li><img src="'.base_url().'/images/flaticon/upload/dancer2.png"></li>
-					  <li><img src="'.base_url().'/images/flaticon/upload/director2.png"></li>
-					  <li><img src="'.base_url().'/images/flaticon/upload/musician2.png"></li>
-					  <li><img src="'.base_url().'/images/flaticon/upload/painter2.png"></li>
-					  <li><img src="'.base_url().'/images/flaticon/upload/writer2.png"></li>
+					  <li><img src="'.base_url().'/images/flaticon/upload/actor1.png" onclick="change(this)"></li>
+					  <li><img src="'.base_url().'/images/flaticon/upload/dancer1.png" onclick="change(this)"></li>
+					  <li><img src="'.base_url().'/images/flaticon/upload/director1.png" onclick="change(this)"></li>
+					  <li><img src="'.base_url().'/images/flaticon/upload/musician1.png" onclick="change(this)"></li>
+					  <li><img src="'.base_url().'/images/flaticon/upload/painter1.png" onclick="change(this)"></li>
+					  <li><img src="'.base_url().'/images/flaticon/upload/writer1.png" onclick="change(this)"></li>
 					</ul>
 			 	</div>
 		 </div>
 	</div>';
 }
 ?>
+<script type="text/javascript">
+	
+
+ function change(img) {
+    if (img.src.match("2.png")) {
+    	img.src=img.src.replace("2.png","1.png");
+    }
+    else{
+    img.src=img.src.replace("1.png","2.png");	
+    }
+ 	
+ }
+
+</script>
   </div>
