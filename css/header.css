@@ -8,4 +8,6 @@ button{
 	background-color: transparent;
 	border:0px solid transparent;
 }
- 
+ #drop_menu li a img{
+ 	padding: 4px;
+ }

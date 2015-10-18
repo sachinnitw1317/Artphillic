@@ -1,4 +1,4 @@
-<div class="col-xs-24 col-sm-24 col-md-14 col-lg-14 ">
+<div class="col-xs-24 col-sm-24 col-md-15">
 			<?php 
 				$count=0;
 				foreach ($query->result() as $key) {

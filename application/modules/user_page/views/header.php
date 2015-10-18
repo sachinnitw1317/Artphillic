@@ -9,6 +9,8 @@
 		<link href="<?php echo base_url(); ?>/css/main_page.css" rel="stylesheet">
 		<link href="<?php echo base_url(); ?>/css/header.css" rel="stylesheet">
 		<link href="<?php echo base_url(); ?>/css/user_post.css" rel="stylesheet">
+		<link href="<?php echo base_url(); ?>/css/profile_page.css" rel="stylesheet">
+		<script src="<?php echo base_url(); ?>/js/profile_page.js"></script>
 		<script src="<?php echo base_url(); ?>/js/jquery.min.js"></script>
 		<script src="<?php echo base_url(); ?>/js/bootstrap.min.js"></script>
 	</head>
@@ -29,21 +31,21 @@
 	 		<!-- Collect the nav links, forms, and other content for toggling -->
 	 		<div id="header" class="collapse navbar-collapse navbar-ex1-collapse" style="background-image:url('http://localhost/artphillic//images/navbar.png');background-color: white;background-attachment: fixed;background-repeat: no-repeat;background-position-x: -85px;">
 	 			<ul class="nav navbar-nav">
-	 				<li><a href="<?php echo base_url(); ?>/cart"><img src="<?php echo base_url(); ?>/images/logo.png" style="width: 100px;/* height: 70px; */padding: 0px;/* margin: -10px; */margin-top: -24px;margin-bottom: -22px;"></a></li>
+	 				<li><a href="<?php echo base_url(); ?>profile_page"><img src="<?php echo base_url(); ?>/images/logo.png" style="width: 100px;/* height: 70px; */padding: 0px;/* margin: -10px; */margin-top: -24px;margin-bottom: -22px;"></a></li>
 	 				 
 	 			</ul>
 	 				<ul class="nav navbar-nav navbar-right">
-	 				<li><a href="#">Learn</a></li>
-	 				<li><a href="#">Competition</a></li>
-	 				<li><a href="#">Gallery</a></li>
+	 				<li><a href="<?php echo base_url(); ?>learn">Learn</a></li>
+	 				<li><a href="<?php echo base_url(); ?>competition">Competition</a></li>
+	 				<li><a href="<?php echo base_url(); ?>cart">Gallery</a></li>
 	 				<li>
-	 					<a href="<?php echo base_url(); ?>cart/login" class="dropdown-toggle" data-toggle="dropdown">Login<b class="caret"></b></a>
+	 					<a href="<?php echo base_url(); ?>cartlogin" class="dropdown-toggle" data-toggle="dropdown">Login<b class="caret"></b></a>
 	 					<ul id="drop_menu" class="dropdown-menu">
-	 						<li><a href="<?php echo base_url(); ?>cart/login"><img src="<?php echo base_url(); ?>/images/header/dashboard.png"> Dashboard</a></li>
-	 						<li><a href="#"><img src="<?php echo base_url(); ?>/images/header/my_profile.png"> My Profile</a></li>
-	 						<li><a href="#"><img src="<?php echo base_url(); ?>/images/header/upload.png"> Upload to Gallery</a></li>
-	 						<li><a href="#"><img src="<?php echo base_url(); ?>/images/header/edit.png"> Edit Profile</a></li>
-	 						<li><a href="#"><img src="<?php echo base_url(); ?>/images/header/logout.png"> Logout</a></li>
+	 						<li><a href="<?php echo base_url(); ?>dashboard"><img src="<?php echo base_url(); ?>/images/header/dashboard.png"> Dashboard</a></li>
+	 						<li><a href="<?php echo base_url(); ?>profile_page"><img src="<?php echo base_url(); ?>/images/header/my_profile.png"> My Profile</a></li>
+	 						<li><a href="<?php echo base_url(); ?>upload"><img src="<?php echo base_url(); ?>/images/header/upload.png"> Upload to Gallery</a></li>
+	 						<li><a href="<?php echo base_url(); ?>edit"><img src="<?php echo base_url(); ?>/images/header/edit.png"> Edit Profile</a></li>
+	 						<li><a href="<?php echo base_url(); ?>logout"><img src="<?php echo base_url(); ?>/images/header/logout.png"> Logout</a></li>
 	 					</ul>
 	 				</li>
 	 			</ul>
