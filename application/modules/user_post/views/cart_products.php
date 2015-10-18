@@ -1,4 +1,4 @@
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-offset-1 col-lg-12">
+
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 foreach ($query->result() as $key) {	
@@ -34,4 +34,4 @@ echo '<div class="row post_box" >
 	</div>';
 }
 ?>
-</div>
+ 
