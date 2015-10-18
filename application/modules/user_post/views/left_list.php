@@ -6,7 +6,7 @@
 	 	</br>
 	 	</br>
  	</div>
-	<div class="col-xs-24 col-sm-24 col-md-4 col-lg-4 nopadding ">
+	<div class="col-xs-24 col-sm-24 col-md-4 nopadding ">
 		<div class="list-group nopadding">
 				  <a href="#" class="list-group-item active" data-toggle="collapse" data-target="#about_me">About me</a>
 				  <div id="about_me" class="collapse">
@@ -30,5 +30,5 @@
 				  </div>
 		</div>
 	</div>
- 
+ <div class="col-xs-24 col-sm-24 col-md-13">
 <!-- two div are required more for completion-->

@@ -100,7 +100,7 @@
   </form>
 </div>
 <?php
-$this->load->view('user_post/cart_products.php');
+$this->load->view('profile_product');
 ?>
 </div>
  

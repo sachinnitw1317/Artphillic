@@ -1,4 +1,4 @@
-
+<div class="col-xs-24 col-sm-24 col-md-24">
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 foreach ($query->result() as $key) {	
