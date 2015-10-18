@@ -1,9 +1,7 @@
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-offset-1 col-lg-12">
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
-foreach ($query->result() as $key) {
-
-	
+foreach ($query->result() as $key) {	
 
 echo '<div class="row post_box" >
 			<div class="col-md-3">
@@ -20,6 +18,17 @@ echo '<div class="row post_box" >
 			 	</div>
 			 	<div class="row">
 				 	<p class="text-justify">'.$key->description.'</p>
+			 	</div>
+			 	<div class="row">
+			 	<br>
+				 	<ul class="list-inline list-images">
+					  <li><img src="'.base_url().'/images/flaticon/upload/actor2.png"></li>
+					  <li><img src="'.base_url().'/images/flaticon/upload/dancer2.png"></li>
+					  <li><img src="'.base_url().'/images/flaticon/upload/director2.png"></li>
+					  <li><img src="'.base_url().'/images/flaticon/upload/musician2.png"></li>
+					  <li><img src="'.base_url().'/images/flaticon/upload/painter2.png"></li>
+					  <li><img src="'.base_url().'/images/flaticon/upload/writer2.png"></li>
+					</ul>
 			 	</div>
 			</div>
 	</div>';

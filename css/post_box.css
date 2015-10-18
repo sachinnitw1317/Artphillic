@@ -1,0 +1,7 @@
+.list-images li{
+  	background-color: cyan;
+}
+
+.list-images li:hover{
+  	background-color: white;
+}

@@ -15,3 +15,11 @@
 	overflow-y:scroll;
 	background-attachment: fixed;
 }
+.list-images li img{
+  	width: 16px;
+  	height: 16px;
+}
+
+.list-images li:hover{
+  	border: 1px solid #6dcff6;
+}
