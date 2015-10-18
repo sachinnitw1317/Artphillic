@@ -7,14 +7,15 @@
 		<title>Online_cart</title>
 		<link href="<?php echo base_url(); ?>/css/bootstrap.min.css" rel="stylesheet">
 		<link href="<?php echo base_url(); ?>/css/main_page.css" rel="stylesheet">
+		<link href="<?php echo base_url(); ?>/css/header.css" rel="stylesheet">
 		<link href="<?php echo base_url(); ?>/css/user_post.css" rel="stylesheet">
 		<script src="<?php echo base_url(); ?>/js/jquery.min.js"></script>
 		<script src="<?php echo base_url(); ?>/js/bootstrap.min.js"></script>
 	</head>
-	<body data-spy="scroll" data-target="#spy" data-offset="5">
-	<div class="container-fluid nopadding custom_color">
+	<body id="main_body" style="background-image: url('<?php echo base_url(); ?>/images/post_page.png'); background-attatchment:fixed;">
+	<div class="container-fluid nopadding">
 	 <div class="row">
-	 	<nav class="navbar navbar-default" role="navigation">
+	 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	 		<!-- Brand and toggle get grouped for better mobile display -->
 	 		<div class="navbar-header">
 	 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -23,33 +24,36 @@
 	 				<span class="icon-bar"></span>
 	 				<span class="icon-bar"></span>
 	 			</button>
-	 			<a class="navbar-brand" href="#">Shopping cart</a>
-	 		</div>
+	 			 </div>
 	 	
 	 		<!-- Collect the nav links, forms, and other content for toggling -->
-	 		<div class="collapse navbar-collapse navbar-ex1-collapse">
+	 		<div id="header" class="collapse navbar-collapse navbar-ex1-collapse" style="background-image:url('http://localhost/artphillic//images/navbar.png');background-color: white;background-attachment: fixed;background-repeat: no-repeat;background-position-x: -85px;">
 	 			<ul class="nav navbar-nav">
-	 				<li class="active"><a href="<?php echo base_url(); ?>cart">Home</a></li>
-	 				<li><a href="<?php echo base_url(); ?>cart/about">About</a></li>
+	 				<li><a href="<?php echo base_url(); ?>/cart"><img src="<?php echo base_url(); ?>/images/logo.png" style="width: 100px;/* height: 70px; */padding: 0px;/* margin: -10px; */margin-top: -24px;margin-bottom: -22px;"></a></li>
+	 				 
 	 			</ul>
-	 			<form class="navbar-form navbar-left" role="search">
-	 				<div class="form-group">
-	 					<input type="text" class="form-control" placeholder="Search">
-	 				</div>
-	 				<button type="submit" class="btn btn-default">Submit</button>
-	 			</form>
-	 			<ul class="nav navbar-nav navbar-right">
-	 				<li><a href="#">Link</a></li>
+	 				<ul class="nav navbar-nav navbar-right">
+	 				<li><a href="#">Learn</a></li>
+	 				<li><a href="#">Competition</a></li>
+	 				<li><a href="#">Gallery</a></li>
 	 				<li>
 	 					<a href="<?php echo base_url(); ?>cart/login" class="dropdown-toggle" data-toggle="dropdown">Login<b class="caret"></b></a>
-	 					<ul class="dropdown-menu">
-	 						<li><a href="<?php echo base_url(); ?>cart/login">Login</a></li>
-	 						<li><a href="#">Logout</a></li>
-	 						<li><a href="#">Something else here</a></li>
-	 						<li><a href="#">Separated link</a></li>
+	 					<ul id="drop_menu" class="dropdown-menu">
+	 						<li><a href="<?php echo base_url(); ?>cart/login"><img src="<?php echo base_url(); ?>/images/header/dashboard.png"> Dashboard</a></li>
+	 						<li><a href="#"><img src="<?php echo base_url(); ?>/images/header/my_profile.png"> My Profile</a></li>
+	 						<li><a href="#"><img src="<?php echo base_url(); ?>/images/header/upload.png"> Upload to Gallery</a></li>
+	 						<li><a href="#"><img src="<?php echo base_url(); ?>/images/header/edit.png"> Edit Profile</a></li>
+	 						<li><a href="#"><img src="<?php echo base_url(); ?>/images/header/logout.png"> Logout</a></li>
 	 					</ul>
 	 				</li>
 	 			</ul>
+	 			<form class="navbar-form navbar-left" role="search" style="margin-left: 3%;">
+	 				<div class="form-group">
+	 					<input type="text" class="form-control" placeholder="Find him/her" style="width: 350px;">
+	 				</div>
+	 				<button type="submit"><img src="<?php echo base_url(); ?>/images/header/dashboard.png"></button>
+	 			</form>
+	 		
 	 		</div><!-- /.navbar-collapse -->
 	 	</nav>
 	 </div>

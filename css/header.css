@@ -1,0 +1,11 @@
+.navbar-right li:hover{
+	background-color:rgba(247, 163, 62, 0.62);
+}
+#drop_menu li a:hover{
+	background-color:aliceblue;
+}
+button{
+	background-color: transparent;
+	border:0px solid transparent;
+}
+ 
