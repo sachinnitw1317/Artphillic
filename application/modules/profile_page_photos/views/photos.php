@@ -22,6 +22,7 @@ echo '<div class="col-sm-6 col-md-8 post_box">
 	    </div>';
 }
 ?>
+</div>
 <script type="text/javascript">
 	
 
@@ -36,4 +37,3 @@ echo '<div class="col-sm-6 col-md-8 post_box">
  }
 
 </script>
-</div>

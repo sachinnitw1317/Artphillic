@@ -35,6 +35,7 @@ echo '<div class="row post_box" >
 	</div>';
 }
 ?>
+</div>
 <script type="text/javascript">
 	
 
@@ -49,4 +50,3 @@ echo '<div class="row post_box" >
  }
 
 </script>
-  </div>

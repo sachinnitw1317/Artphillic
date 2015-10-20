@@ -11,8 +11,17 @@ class Profile_page extends MX_Controller {
 		$this->load->model('mdl_profile_page');
 		$data['query']=$this->mdl_profile_page->data();
 		$this->load->view('main_page',$data);
-
 	}
+	 public function upload_text(){
+	 	$this->load->model('mdl_profile_page');
+	 	$data['query'] = array(
+	 	'post_text' => $this->input->post('post_text'),
+	 	'posted_by' => $this->input->post('posted_by'),
+	 	'posted_on' => $this->input->post('posted_on'),
+	 	);
+	 	$this->mdl_profile_page->update($data['query']);
+	 }
+
 
 	public function auto(){
 		$this->load->model('mdl_profile_page');

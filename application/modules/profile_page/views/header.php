@@ -15,8 +15,9 @@
 		<script src="<?php echo base_url(); ?>/js/bootstrap.min.js"></script>
 	</head>
 	<body id="main_body" style="background-image: url('<?php echo base_url(); ?>/images/post_page.png'); background-attatchment:fixed;">
-	<div class="container-fluid nopadding">
-	 <div class="row">
+	<div class="container-fluid nopadding"><!--container    -->
+	 <div class="row"><!--row    -->
+	 <!--navbar    -->
 	 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	 		<!-- Brand and toggle get grouped for better mobile display -->
 	 		<div class="navbar-header">
@@ -57,5 +58,10 @@
 	 			</form>
 	 		
 	 		</div><!-- /.navbar-collapse -->
-	 	</nav>
+	 	</nav><!--navbar  -->
+	 </div><!--row1 end  -->
+	 <div class="row"></br>
+	 	 	</br></br>
+	 	 	</br>
 	 </div>
+	 <div class="row" style="border-left:15px solid transparent;"><!--row2 -->

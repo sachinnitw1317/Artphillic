@@ -13,6 +13,10 @@ class Mdl_profile_page extends CI_Model {
         return $data;
     }
 
+    function update($data){
+      $this->db->insert('user_post', $data);
+    }
+
     function get_info($id){
         $data = $this->db->get_where('db_products', array('id' => $id));
         return $data;

@@ -1,4 +1,4 @@
-	<div class="col-xs-24 col-sm-24 col-md-5" style="margin-left: 15px;">
+	<div class="col-xs-24 col-sm-24 col-md-5" style="margin-left: 15px;"><!--right list begin  -->
 				 	<div class="panel panel-primary custom_border">
 						<div class="panel-heading">
 						    <h3 class="panel-title">Notification</h3></div>
@@ -18,7 +18,7 @@
 					<div>
 						<?php echo modules::run('following'); ?>
 					</div>
-	</div>
+	</div><!--rightlist end   -->
 	<script>
 		$(document).ready(function(){
 	    	$('[data-toggle="tooltip"]').tooltip(); 

@@ -1,8 +1,3 @@
-<div class="row"></br>
-	 	</br></br>
-	 	</br></div>
-<div class="row" style="border-left:15px solid transparent;">
-  
 	<div class="col-xs-24 col-sm-24 col-md-5 nopadding">
 		<div class="list-group nopadding" id="left_details">
 				  <a href="#" class="list-group-item" data-toggle="collapse" data-target="#about_me" style="border: 0px solid transparent;"><div id="left_image"><img src="<?php echo base_url(); ?>/images/flaticon/details/about.png"></div> About me <img src="<?php echo base_url(); ?>/images/flaticon/left/plus.png"></a>

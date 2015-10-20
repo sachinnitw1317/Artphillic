@@ -59,3 +59,8 @@
 	 		</div><!-- /.navbar-collapse -->
 	 	</nav>
 	 </div>
+	 <div class="row"></br>
+	 	 	</br></br>
+	 	 	</br></div>
+	 <div class="row" style="border-left:15px solid transparent;">
+	   
