@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Online_cart</title>
+		<title>Login</title>
 		<link href="<?php echo base_url(); ?>/css/bootstrap.min.css" rel="stylesheet">
 		<link href="<?php echo base_url(); ?>/css/login_registeration.css" rel="stylesheet">
 		<script src="<?php echo base_url(); ?>/js/jquery.min.js"></script>

@@ -16,10 +16,10 @@
 	background-attachment: fixed;
 }
 .list-images li img{
-  	width: 16px;
-  	height: 16px;
+  	width: 18px;
+  	height: 18px;
 }
 
-.list-images li:hover{
-  	border: 1px solid #6dcff6;
+.list-images li:hover img{
+  	opacity:0.2;
 }

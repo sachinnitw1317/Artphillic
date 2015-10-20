@@ -1,6 +1,11 @@
 <?php
 class Mdl_login extends CI_Model
 {
+	 public function __construct()
+    {
+        parent::__construct();
+    }
+    
 	public function can_log_in(){
 		$this->db->where('username',$this->input->post('username'));
 		$this->db->where('password',$this->input->post('password'));

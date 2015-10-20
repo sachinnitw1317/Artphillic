@@ -22,30 +22,41 @@ class Login extends MX_Controller {
 			$this->member();
 		*/
 			$this->load->library('form_validation');
-			$this->form_validation->set_rules('username','Username','required|callback_validate_user');
-			$this->form_validation->set_rules('password','Password','required');
+			$this->form_validation->set_rules('username','Username','trim|required|min_length[5]|max_length[12]|callback_validate_user');
+			$this->form_validation->set_rules('password','Password','trim|required');
 		if ($this->form_validation->run($this)==true) {
-			$data=array(
-				'username'=>$this->input->post('username'),
-				'logged_in'=>1,
+			$username=$_POST['username'];
+			if (isset($_POST['remember_me'])) {
+				$cookie=array(
+					'name'=>'artphillic',
+					'value'=>$username,
+					'expire'=>time()+3153600,
+					'domain'=>'artphillic.com'
 				);
-			$this->session->set_userdata($data);
-			$this->member();
+				$this->input->set_cookie($cookie);
+			}
+			else if(!isset($_POST['remember_me'])) {
+				$data=array(
+					'username'=>$this->input->post('username'),
+					'email'=>$this->input->post('email'),
+					'logged_in'=>1,
+					);
+				$this->session->set_userdata($data);
+				if(isset($_COOKIE['artphillic'])) {
+						setcookie('artphillic',$_POST['username'],time()-450000,"artphillic.com");
+				}
+			}
+			
+			echo modules::run('profile_page');
 		}
 		else{
 		$this->viewer();
 		}
 	
 	}
-	public function check($data){
-		$data=stripslashes($data);
-		$data=htmlspecialchars($data);
-		$data=trim($data);
-
-		return $data;
-	}
 	public function validate_user(){
 		$this->load->model('mdl_login');
+		$this->load->helper('cookie');
 		if($this->mdl_login->can_log_in()){
 			return true;
 		}
@@ -64,11 +75,11 @@ class Login extends MX_Controller {
 		$this->load->view('register_footer');
 		}
 		else
-		redirect('<?php echo base_url(); ?>cart/login');
+		redirect('<?php echo base_url(); ?>login');
 	}
 	public function logout(){
 		$this->session->sess_destroy();
-		redirect('<?php echo base_url(); ?>cart/login');
+		redirect('<?php echo base_url()?>login');
 	}
 	public function sign_up(){
 		$this->load->view('register');
@@ -96,7 +107,7 @@ class Login extends MX_Controller {
 			$this->email->from('sachin931350@gmail.com','sachin931350');
 			$this->email->to($this->input->post('email'));
 			$this->email->subject('confirm your account');
-			$message="<p><a href='".base_url()."/login/sign_up_validation/$key'>click here</a></p>";
+			$message="<p><a href='".base_url()."login/sign_up_validation/$key'>click here</a></p>";
 			$this->email->message($message);
 			 /*if($this->email->send())
 		          echo 'Email sent.';
@@ -120,9 +131,5 @@ class Login extends MX_Controller {
 		    else
 			$this->sign_up();
 
-	}
-	public function login_facebook(){
-
-		redirect('<?php echo base_url(); ?>login_facebook');
 	}
 }

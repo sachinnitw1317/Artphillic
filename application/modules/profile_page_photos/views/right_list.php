@@ -1,4 +1,5 @@
-	<div class="col-xs-24 col-sm-24 col-md-5" style="margin-left: 15px;">
+</div>
+<div class="col-xs-24 col-sm-24 col-md-5" style="margin-left: 15px;">
 				 	<div class="panel panel-primary custom_border">
 						<div class="panel-heading">
 						    <h3 class="panel-title">Notification</h3></div>
@@ -11,12 +12,12 @@
 							</div>
 					</div>
 					<div>
-							<?php echo modules::run('followers'); ?>
+						<button class="btn btn-primary col-xs-24 col-sm-24 col-md-24 col-lg-24" type="button">Follower&nbsp&nbsp<span class="badge">4</span></button>
 					</div>
 					</br>
 					</br>
 					<div>
-						<?php echo modules::run('following'); ?>
+						<button class="btn btn-primary col-xs-24 col-sm-24 col-md-24 col-lg-24" type="button">Following &nbsp &nbsp<span class="badge">4</span></button>
 					</div>
 	</div>
 	<script>
