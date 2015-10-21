@@ -1,24 +1,4 @@
 <script src="<?php echo base_url(); ?>/js/profile_page.js"></script>
-<script type='text/javascript'>
-    $("#form_ajax").submit(function(event) {
-      event.preventDefault();
-      var $form = $( this ),
-      url = $form.attr( 'action' );
-      var post_t=document.getElementById("form_ajax").elements.namedItem("post_text").value;
-      var post_to="ketki";
-      var posting = $.post( url, { post_text:post_t, posted_by:post_b ,posted_on:post_to} );
-       posting.done(function( data ) {
-        $('#last').prepend('<div class="row post_box">\
-          <div class="col-md-3">\
-          you just posted\
-           </div>\
-          <div class="col-md-20">\
-         '+post_t +'\
-          </div>\
-          </div>');
-      });
-    });
-</script>
 <div class="col-xs-24 col-sm-24 col-md-13"><!--13 columns begin -->
   <div id="main"><!--main begin-->
         <div class="card hovercard">
@@ -88,7 +68,44 @@
 
   </div><!--main end here-->
 
-
+<script type='text/javascript'>
+    $("#form_ajax").submit(function(event) {
+      event.preventDefault();
+      var $form = $( this ),
+      url = $form.attr( 'action' );
+      var post_t=document.getElementById("form_ajax").elements.namedItem("post_text").value;
+      var posting = $.post( url, { post_text:post_t} );
+       posting.done(function( data ) {
+        $('#last').prepend('<div class="row post_box">\
+          <div class="col-md-3"><br>\
+              <img class="img-circle" alt="profile_pic" width="60px" height="60px" src="<?php echo base_url(); ?>/images/profile_pic/<?php echo $_SESSION['username']; ?>.jpg"/>\
+          </div>\
+          <div class="col-md-20"><br>\
+                <div class="row">\
+                    <div class="col-md-12">\
+                        <h4><?php echo $_SESSION['username'] ?></h4>\
+                    </div>\
+                    <h5 class="text-right">just now</h5>\
+                </div>\
+               <div class="row">\
+                  <p class="text-justify">'+post_t+'</p>\
+              </div>\
+          <div class="row">\
+            <ul class="list-inline list-images">\
+              <li><img src="http://localhost/artphilic/images/flaticon/upload/actor1.png" onclick="change(this)"></li>\
+              <li><img src="http://localhost/artphilic/images/flaticon/upload/dancer1.png" onclick="change(this)"></li>\
+              <li><img src="http://localhost/artphilic/images/flaticon/upload/director1.png" onclick="change(this)"></li>\
+              <li><img src="http://localhost/artphilic/images/flaticon/upload/musician1.png" onclick="change(this)"></li>\
+              <li><img src="http://localhost/artphilic/images/flaticon/upload/painter1.png" onclick="change(this)"></li>\
+              <li><img src="http://localhost/artphilic/images/flaticon/upload/writer1.png" onclick="change(this)"></li>\
+            </ul>\
+          </div>\
+        </div>\
+    </div>\
+          ');
+      });
+    });
+</script>
 <!-- var Date = new Date();
            var Hrs = Date.getHours();
            var Min = Date.getMinutes();

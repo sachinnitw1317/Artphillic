@@ -124,3 +124,18 @@ body{
     text-align: right;
     margin-top: 30px;
 }
+#txtHint{
+    position:absolute;
+    left: 13%;
+    top: 42px;
+    width: 26%;
+    max-height:300px;
+    list-style: none;
+    background-color: white;
+    overflow: auto;
+}
+
+#txtHint img {
+
+}
+

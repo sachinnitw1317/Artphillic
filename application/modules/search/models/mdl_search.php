@@ -13,11 +13,12 @@ class Mdl_search extends CI_Model {
         $this->db->order_by('username');
         $query=$this->db->get('users');
         if($query->num_rows()>0){
-            $output='<ul>';
+            $output="";
             foreach ($query->result() as $key) {
-               $output.='<li>'.$key->username.'</ul>';
+               $output.='<li><a href="http://localhost/artphilic/user_page/get_data/'.$key->username.'">';
+               $output.='<img class="img-circle" alt="profile_pic" width="20px" height="20px" src="http://localhost/artphilic/images/profile_pic/'.$key->username.'.jpg">';
+               $output.=''.$key->username.'</li>';
             }
-            $output.='<ul/>';
             return $output;
         }
         else

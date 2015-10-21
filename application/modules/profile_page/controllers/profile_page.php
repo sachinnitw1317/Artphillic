@@ -19,7 +19,6 @@ class Profile_page extends MX_Controller {
 	 	$data['query'] = array(
 	 	'post_text' => $this->input->post('post_text'),
 	 	'posted_by' => $_SESSION['username'],
-	 	'posted_on' => $this->input->post('posted_on'),
 	 	);
 	 	$this->mdl_profile_page->update($data['query']);
 	 }
