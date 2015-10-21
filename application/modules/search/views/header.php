@@ -13,7 +13,6 @@
 		<script src="<?php echo base_url(); ?>/js/profile_page.js"></script>
 		<script src="<?php echo base_url(); ?>/js/jquery.min.js"></script>
 		<script src="<?php echo base_url(); ?>/js/bootstrap.min.js"></script>
-		<script src="<?php echo base_url(); ?>/js/search.js"></script>
 	</head>
 	<body id="main_body" style="background-image: url('<?php echo base_url(); ?>/images/post_page.png'); background-attatchment:fixed;">
 	<div class="container-fluid nopadding"><!--container    -->
@@ -53,17 +52,14 @@
 	 			</ul>
 	 			<form class="navbar-form navbar-left" role="search" style="margin-left: 3%;" >
 	 				<div class="form-group">
-	 					<input type="text" class="form-control" placeholder="Find him/her" style="width: 350px;" onkeyup="sethint(this.value)" name="search">
+	 					<input type="text" class="form-control" placeholder="Find him/her" style="width: 350px;" onkeyup="keyupFunction()" name="search">
 	 				</div>
 	 				<button type="submit"><img src="<?php echo base_url(); ?>/images/header/dashboard.png"></button>
 	 			</form>
-	 			<div id="txtHint">
+	 			<div id="suggestion_box">
 	 				
 	 			</div>
-	 		<!-- 	<div id="suggestion_box">
-	 				<?php echo modules::run('search'); ?>
-	 			</div>
-	 		 -->
+	 		
 	 		</div><!-- /.navbar-collapse -->
 	 	</nav><!--navbar  -->
 	 </div><!--row1 end  -->
@@ -72,4 +68,15 @@
 	 	 	</br>
 	 </div>
 	 <div class="row" style="border-left:15px solid transparent;"><!--row2 -->
-	 
+	 <script type="text/javascript">
+	 function keyupFunction() {
+	      var xhttp = new XMLHttpRequest();
+	      xhttp.onreadystatechange=function() {
+	        if (xhttp.readyState == 4 && xhttp.status == 200) {
+	          document.getElementById("suggestion_box").innerHTML=$("input[name='search']").val();
+	        }
+	      }
+	      xhttp.open("GET", "search.php?t="+$("input[name='search']").val();, true);
+	      xhttp.send();
+	    }
+	 </script>

@@ -1,17 +1,37 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Profile_page extends MX_Controller {
+class Search extends MX_Controller {
 	
 	public function index(){
 		$this->get_data();
 	}
 
+	public function get_data()
+	{	
+		$this->load->model('mdl_search');
+		$search_text=$_GET['q'];
+		$data['user_list']=$this->mdl_search->get_result($search_text);
+		$this->load->view('search_results',$data);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 	public function get_data(){
 		$this->load->model('mdl_profile_page');
-		$this->load->model('following/mdl_following');
-		$following=$this->mdl_following->data();
-		$data['query']=$this->mdl_profile_page->data($following);
+		$data['query']=$this->mdl_profile_page->data();
 		$this->load->view('main_page',$data);
 	}
 	 public function upload_text(){
@@ -44,7 +64,7 @@ class Profile_page extends MX_Controller {
 			else
 				echo "failed";
 		}
-	}
+	}*/
 
 
 

@@ -14,13 +14,6 @@ class Login extends MX_Controller {
 		$this->load->view('register_footer');
 	}
 	public function validation(){
-		/*
-		if (isset($_POST['username']) && isset($_POST['password'])) {
-			$password=$this->check($_POST['password']);
-			$username=$this->check($_POST['username']);
-			$data=array($password,$username);
-			$this->member();
-		*/
 			$this->load->library('form_validation');
 			$this->form_validation->set_rules('username','Username','trim|required|min_length[5]|max_length[12]|callback_validate_user');
 			$this->form_validation->set_rules('password','Password','trim|required');
@@ -47,7 +40,8 @@ class Login extends MX_Controller {
 				}
 			}
 			
-			echo modules::run('profile_page');
+			//echo modules::run("profile_page",$username);
+			redirect("profile_page/load_user/$username",'refresh');
 		}
 		else{
 		$this->viewer();

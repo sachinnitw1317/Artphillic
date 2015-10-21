@@ -7,9 +7,9 @@ class Mdl_user_page extends CI_Model {
         parent::__construct();
     }
 
-    function data(){
+    function data($user){
         $this->db->order_by("id", "desc");
-        $data = $this->db->get('user_post');
+        $data = $this->db->get_where('user_post', array('posted_by' => $user));
         return $data;
     }
 

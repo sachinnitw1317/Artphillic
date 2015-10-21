@@ -1,18 +1,34 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Mdl_profile_page extends CI_Model {
+class Mdl_search extends CI_Model {
 
     function __construct()
     {
         parent::__construct();
     }
 
-    function data($following){
-        $this->db->where('posted_by',$this->session->userdata('username'));
-        foreach ($following->result() as $key) {
-        $this->db->or_where('posted_by', $key->username);
+    function get_result($search_text)
+    {
+        $this->db->like('username', $search_text);     
+        $this->db->order_by('username');
+        $query=$this->db->get('users');
+        if($query->num_rows()>0){
+            $output='<ul>';
+            foreach ($query->result() as $key) {
+               $output.='<li>'.$key->username.'</ul>';
+            }
+            $output.='<ul/>';
+            return $output;
         }
-        $this->db->order_by("time", "desc");
+        else
+            echo "<strong>no results to display<strrong>";
+
+    }
+
+
+
+  /*  function data(){
+        $this->db->order_by("id", "desc");
         $data = $this->db->get('user_post');
         return $data;
     }
@@ -31,5 +47,5 @@ class Mdl_profile_page extends CI_Model {
     function get_info($id){
         $data = $this->db->get_where('db_products', array('id' => $id));
         return $data;
-    }
+    }*/
 }

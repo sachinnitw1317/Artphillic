@@ -5,6 +5,7 @@
       var $form = $( this ),
       url = $form.attr( 'action' );
       var post_t=document.getElementById("form_ajax").elements.namedItem("post_text").value;
+      var post_b="sachin";
       var post_to="ketki";
       var posting = $.post( url, { post_text:post_t, posted_by:post_b ,posted_on:post_to} );
        posting.done(function( data ) {
