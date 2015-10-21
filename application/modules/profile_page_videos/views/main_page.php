@@ -10,7 +10,4 @@ $this->load->view('videos',$query);
 				<span class="badge">5</span>
 				GOLD
 			</li>-->
-</div>
-</div>
-</body>
-</html>
+ 

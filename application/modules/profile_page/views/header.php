@@ -40,6 +40,16 @@
 	 				<li><a href="<?php echo base_url(); ?>learn">Learn</a></li>
 	 				<li><a href="<?php echo base_url(); ?>competition">Competition</a></li>
 	 				<li><a href="<?php echo base_url(); ?>cart">Gallery</a></li>
+	 				<li class="dropdown" style="margin-top:-5px;">
+	 					<a href="<?php echo base_url(); ?>cartlogin" class="dropdown-toggle" data-toggle="dropdown"> <img src="<?php echo base_url(); ?>/images/flaticon/details/notification.png"><sup class="badge" style="margin-left:-5px;">4</sup></a>
+	 					<ul id="drop_menu" class="dropdown-menu">
+	 						<li><a href="<?php echo base_url(); ?>dashboard"><img src="<?php echo base_url(); ?>/images/header/dashboard.png"> Dashboard</a></li>
+	 						<li><a href="<?php echo base_url(); ?>profile_page"><img src="<?php echo base_url(); ?>/images/header/my_profile.png"> My Profile</a></li>
+	 						<li><a href="<?php echo base_url(); ?>upload"><img src="<?php echo base_url(); ?>/images/header/upload.png"> Upload to Gallery</a></li>
+	 						<li><a href="<?php echo base_url(); ?>edit"><img src="<?php echo base_url(); ?>/images/header/edit.png"> Edit Profile</a></li>
+	 						<li><a href="<?php echo base_url(); ?>logout"><img src="<?php echo base_url(); ?>/images/header/logout.png"> Logout</a></li>
+	 					</ul>
+	 				</li>
 	 				<li>
 	 					<a href="<?php echo base_url(); ?>cartlogin" class="dropdown-toggle" data-toggle="dropdown">Login<b class="caret"></b></a>
 	 					<ul id="drop_menu" class="dropdown-menu">

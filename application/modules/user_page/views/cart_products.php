@@ -1,11 +1,9 @@
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-offset-1 col-lg-12">
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
+if($query->num_rows()>0){
 foreach ($query->result() as $key) {
-
-	
-
-echo '<div class="row post_box" >
+	echo '<div class="row post_box" >
 			<div class="col-md-3">
 			<br>
 				<img src="'.base_url().'/images/profile_pic/'.$key->posted_by.'.jpg" class="img-circle" alt="profile_pic" width="60px" height="60px" >
@@ -35,6 +33,9 @@ echo '<div class="row post_box" >
 			</div>
 	</div>';
 }
+}
+else
+	echo "no post here";
 ?>
 <script type="text/javascript">
 	

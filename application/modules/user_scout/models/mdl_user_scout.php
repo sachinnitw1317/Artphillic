@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Mdl_profile_page extends CI_Model {
+class Mdl_user_scout extends CI_Model {
 
     function __construct()
     {

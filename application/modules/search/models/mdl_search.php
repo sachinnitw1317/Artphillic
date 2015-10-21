@@ -15,6 +15,7 @@ class Mdl_search extends CI_Model {
         if($query->num_rows()>0){
             $output="";
             foreach ($query->result() as $key) {
+                $imageURL="http://localhost/artphilic/images/profile_pic/'.$key->username.'.jpg";
                $output.='<li><a href="http://localhost/artphilic/user_page/get_data/'.$key->username.'">';
                $output.='<img class="img-circle" alt="profile_pic" width="20px" height="20px" src="http://localhost/artphilic/images/profile_pic/'.$key->username.'.jpg">';
                $output.=''.$key->username.'</li>';
@@ -25,8 +26,6 @@ class Mdl_search extends CI_Model {
             echo "<strong>no results to display<strrong>";
 
     }
-
-
 
   /*  function data(){
         $this->db->order_by("id", "desc");

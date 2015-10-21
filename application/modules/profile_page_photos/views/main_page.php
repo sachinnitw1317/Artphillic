@@ -10,7 +10,4 @@ $this->load->view('photos',$query);
 				<span class="badge">5</span>
 				GOLD
 			</li>-->
-</div>
-</div>
-</body>
-</html>
+ 

@@ -17,7 +17,7 @@ echo '<div class="row post_box" >
 			 		<h5 class="text-right">'.date("d-M-Y H:i a",strtotime($key->time)).'</h5>
 			 	</div>
 			 	<div class="row">
-				 	<p class="text-justify">'.$key->description.'</p>
+				 	<p class="text-justify">'.$key->post_text.'</p>
 			 	</div>
 			 	<div class="row">
 			 	<br>
