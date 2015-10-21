@@ -30,8 +30,8 @@
               
                 <div class="tab-pane fade in active" id="post">  
                   <form action="<?php echo base_url(); ?>profile_page/upload_text" method="POST" role="form" id="form_ajax" name="form_ajax">
-                      <textarea name="post_text" id="input" class="form-control" rows="3" required="required"></textarea>
-                     <button type="submit" class="btn btn-primary">Submit</button>
+                      <textarea name="post_text" id="input" class="form-control" rows="3" style="height:120px;" required="required"></textarea>
+                     <button type="submit" style="float:right;"> <img src="<?php echo base_url(); ?>/images/flaticon/upload/upload.png"/></button>
                    </form>
                 </div>
 

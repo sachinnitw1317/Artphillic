@@ -44,7 +44,7 @@
 				   <div id="dance" class="collapse">
 					  load something from php
 				  </div>
-				  <a href="#" class="list-group-item" data-toggle="collapse" data-target="#group" style="border: 0px solid transparent;"><div id="left_image"><img src="<?php echo base_url(); ?>/images/flaticon/details/groups.png"></div>Your Groups<img src="<?php echo base_url(); ?>/images/flaticon/left/plus.png"></a>
+				  <a href="#" class="list-group-item" data-toggle="collapse" data-target="#group" style="border: 0px solid transparent;"><div id="left_image"><img src="<?php echo base_url(); ?>/images/flaticon/details/groups.png"></div>Name Groups<img src="<?php echo base_url(); ?>/images/flaticon/left/plus.png"></a>
 				   <div id="group" class="collapse">
 					  load something from php
 				  </div>

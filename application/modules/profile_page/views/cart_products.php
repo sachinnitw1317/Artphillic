@@ -19,7 +19,7 @@
        </ul>
     <div class="tab-content"><!--tabs content begin    -->
         <div class="tab-pane fade in active" id="ifeed">
-              <div id="b_right">
+                <div id="b_right">
                   <ul class="nav nav-tabs" style="width: 100%;  margin: auto;">
                     <li class="active"><a href="#post" data-toggle="tab" style="padding: 0px;"><img src="<?php echo base_url(); ?>/images/flaticon/upload/post.png"></a></li>
                     <li ><a href="#picture" data-toggle="tab"style="padding: 0px;"><img src="<?php echo base_url(); ?>/images/flaticon/upload/picture.png"></a></li>

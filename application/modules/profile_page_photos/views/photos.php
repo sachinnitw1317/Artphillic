@@ -3,9 +3,9 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 foreach ($query->result() as $key) {	
-echo '<div class="col-sm-6 col-md-8 post_box">
+echo '<div class="col-sm-6 col-md-12 post_box" style="padding:5px;">
 			<div class="thumbnail">
-			    <img src="'.base_url().'/images/user_photos/'.$key->id.'.jpg" alt="image" class="img-responsive">
+			    <img src="'.base_url().'/images/user_photos/'.$key->id.'.jpg" alt="image" class="img-responsive" style="width:100%;height:180px;">
 			    <div class="caption">
 			       	<div class="row">
 			      	 	<ul class="list-inline list-images">

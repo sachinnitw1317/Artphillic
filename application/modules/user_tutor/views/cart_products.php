@@ -19,42 +19,10 @@
        </ul>
     <div class="tab-content"><!--tabs content begin    -->
         <div class="tab-pane fade in active" id="ifeed">
-              <div id="b_right">
-                  <ul class="nav nav-tabs" style="width: 100%;  margin: auto;">
-                    <li class="active"><a href="#post" data-toggle="tab" style="padding: 0px;"><img src="<?php echo base_url(); ?>/images/flaticon/upload/post.png"></a></li>
-                    <li ><a href="#picture" data-toggle="tab"style="padding: 0px;"><img src="<?php echo base_url(); ?>/images/flaticon/upload/picture.png"></a></li>
-                    <li ><a href="#video" data-toggle="tab"style="padding: 0px;"><img src="<?php echo base_url(); ?>/images/flaticon/upload/video.png"></a></li>
-                  </ul>
-              </div>
-              <div class="tab-content">
-              
-                <div class="tab-pane fade in active" id="post">  
-                  <form action="<?php echo base_url(); ?>profile_page/upload_text" method="POST" role="form" id="form_ajax" name="form_ajax">
-                      <textarea name="post_text" id="input" class="form-control" rows="3" required="required"></textarea>
-                     <button type="submit" class="btn btn-primary">Submit</button>
-                   </form>
-                </div>
-
-                <div class="tab-pane fade " id="picture">
-                 <form method="post" action=" " style="padding-top: 50px;margin-left: 33%;" enctype="multipart/form-data">
-                      <input type="file" id="files" name="photos_upload[]" id="iupload" title="upload" multiple onchange="readImagesAndPreview(this.files);" value="">
-                       <button type="submit" name="mphoto" id="save_p" value=" ">
-                        <img src="<?php echo base_url(); ?>/images/flaticon/upload/upload.png"/>
-                       </button>
-                  </form>
-                </div>
-
-                <div class="tab-pane fade " id="video">
-                  <form method="post" action=" " style="padding-top: 50px;margin-left: 17%;"enctype="multipart/form-data">
-                      <input type="url" name="video" placeholder="Enter url of your video" size="50">
-                      <button type="submit" id="save_v" name="mvideo">
-                          <img src="<?php echo base_url(); ?>/images/flaticon/upload/upload.png"/>
-                      </button>
-                  </form>
-                </div>
+               
                   <?php  $this->load->view('profile_product');  ?>
               </div>
-        </div>
+        
        
             <div class="tab-pane fade " id="iphot" >
             <?php  echo modules::run('profile_page_photos');?>
