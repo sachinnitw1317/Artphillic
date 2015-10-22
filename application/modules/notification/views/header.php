@@ -13,7 +13,6 @@
 		<script src="<?php echo base_url(); ?>/js/profile_page.js"></script>
 		<script src="<?php echo base_url(); ?>/js/jquery.min.js"></script>
 		<script src="<?php echo base_url(); ?>/js/bootstrap.min.js"></script>
-		<script src="<?php echo base_url(); ?>/js/search.js"></script>
 	</head>
 	<body id="main_body" style="background-image: url('<?php echo base_url(); ?>/images/post_page.png'); background-attatchment:fixed;">
 	<div class="container-fluid nopadding"><!--container    -->
@@ -37,39 +36,30 @@
 	 				 
 	 			</ul>
 	 				<ul class="nav navbar-nav navbar-right">
-	 				<li><a href="<?php echo base_url(); ?>learn/practice.php">Learn</a></li>
-	 				<li><a href="<?php echo base_url(); ?>compete/compete.php">Competition</a></li>
+	 				<li><a href="<?php echo base_url(); ?>learn">Learn</a></li>
+	 				<li><a href="<?php echo base_url(); ?>competition">Competition</a></li>
 	 				<li><a href="<?php echo base_url(); ?>cart">Gallery</a></li>
-	 				<li class="dropdown" style="margin-top:-5px;">
-	 					<a href="<?php echo base_url(); ?>cartlogin" class="dropdown-toggle" data-toggle="dropdown"> <img src="<?php echo base_url(); ?>/images/flaticon/details/notification.png"><sup class="badge" style="margin-left:-5px;">4</sup></a>
-	 					<ul id="notify" class="dropdown-menu" >
-	 						
-	 					</ul>
-	 				</li>
 	 				<li>
 	 					<a href="<?php echo base_url(); ?>cartlogin" class="dropdown-toggle" data-toggle="dropdown">Login<b class="caret"></b></a>
-	 					<ul id="drop_menu" class="dropdown-menu"  >
+	 					<ul id="drop_menu" class="dropdown-menu">
 	 						<li><a href="<?php echo base_url(); ?>dashboard"><img src="<?php echo base_url(); ?>/images/header/dashboard.png"> Dashboard</a></li>
 	 						<li><a href="<?php echo base_url(); ?>profile_page"><img src="<?php echo base_url(); ?>/images/header/my_profile.png"> My Profile</a></li>
 	 						<li><a href="<?php echo base_url(); ?>upload"><img src="<?php echo base_url(); ?>/images/header/upload.png"> Upload to Gallery</a></li>
 	 						<li><a href="<?php echo base_url(); ?>edit"><img src="<?php echo base_url(); ?>/images/header/edit.png"> Edit Profile</a></li>
-	 						<li><a href="<?php echo base_url(); ?>login/logout"><img src="<?php echo base_url(); ?>/images/header/logout.png"> Logout</a></li>
+	 						<li><a href="<?php echo base_url(); ?>logout"><img src="<?php echo base_url(); ?>/images/header/logout.png"> Logout</a></li>
 	 					</ul>
 	 				</li>
 	 			</ul>
 	 			<form class="navbar-form navbar-left" role="search" style="margin-left: 3%;" >
 	 				<div class="form-group">
-	 					<input type="text" class="form-control" placeholder="Find him/her" style="width: 350px;" onkeyup="sethint(this.value)" name="search">
+	 					<input type="text" class="form-control" placeholder="Find him/her" style="width: 350px;" onkeyup="keyupFunction()" name="search">
 	 				</div>
 	 				<button type="submit"><img src="<?php echo base_url(); ?>/images/header/dashboard.png"></button>
 	 			</form>
-	 			<div id="txtHint">
+	 			<div id="suggestion_box">
 	 				
 	 			</div>
-	 		<!-- 	<div id="suggestion_box">
-	 				<?php echo modules::run('search'); ?>
-	 			</div>
-	 		 -->
+	 		
 	 		</div><!-- /.navbar-collapse -->
 	 	</nav><!--navbar  -->
 	 </div><!--row1 end  -->
@@ -78,3 +68,15 @@
 	 	 	</br>
 	 </div>
 	 <div class="row" style="border-left:15px solid transparent;"><!--row2 -->
+	 <script type="text/javascript">
+	 function keyupFunction() {
+	      var xhttp = new XMLHttpRequest();
+	      xhttp.onreadystatechange=function() {
+	        if (xhttp.readyState == 4 && xhttp.status == 200) {
+	          document.getElementById("suggestion_box").innerHTML=$("input[name='search']").val();
+	        }
+	      }
+	      xhttp.open("GET", "search.php?t="+$("input[name='search']").val();, true);
+	      xhttp.send();
+	    }
+	 </script>

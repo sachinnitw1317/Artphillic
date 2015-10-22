@@ -15,15 +15,16 @@ function sethint(str) {
 }
 setInterval(function()
   {
+
     var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById("noti_tray").innerHTML = xmlhttp.responseText;
+                document.getElementById("notify").innerHTML = xmlhttp.responseText;
             }
         }
-        xmlhttp.open("GET", "notification.php", true);
+        xmlhttp.open("GET", "http://localhost/artphilic/notification", true);
         xmlhttp.send(); 
-  },5000);
+  },500);
 setInterval(function()
   {
     var xmlhttp = new XMLHttpRequest();

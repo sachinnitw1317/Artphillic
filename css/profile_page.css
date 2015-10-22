@@ -139,4 +139,13 @@ body{
     
 
 }
-
+#notify{
+    position:absolute;
+    left: -26%;
+    top: 62px;
+    width: 26%;
+    max-height:300px;
+    list-style: none;
+    background-color: white;
+    overflow-y: auto;
+}

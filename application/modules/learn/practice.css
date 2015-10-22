@@ -1,0 +1,123 @@
+     body{width: 99%;}
+#button{
+    background-color: #20457C;
+    width: 46px;
+    margin-left: -20px;
+}
+#button:hover{
+border-bottom:none;
+}
+ #learn_online{
+ 
+ 
+    
+	     background-color: #F7F7FF;
+ }
+  #learn_offline{
+ 
+ 
+ 
+ 
+  
+	     background-color: #F7F7FF;
+ }
+ #category {
+     
+    margin-top: 30px;
+	    padding-left: 100px;
+}
+ select[name=cate] {    
+width: 200px;
+}
+select[name=country] {    
+width: 130px;
+}
+select[name=cate]:active {    
+width: 200px;
+}
+input[name=Inspire]{
+    width: 64px;
+    height: 64px;
+    background-image: url(inspire.png);
+    border-radius: 32px;
+    background-color: white;
+	
+}
+input[name=Inspire]:hover{
+    width: 64px;
+    height: 64px;
+    background-image: url(inspire.png);
+    border-radius: 32px;
+    background-color: yellow;
+}
+#sort{
+width:100%;
+padding:10px;
+ padding-top:0px;
+ margin-top: -15px;
+}
+#text_sort{
+padding:10px;
+}
+.butt{
+    background-color: #5876A2;
+    padding: 4px 6px;
+    border: 1px solid transparent;
+}
+#d_table {
+width:100%;
+margin:auto;
+text-align:center;
+
+}
+tbody{
+width:100%;
+
+}
+tr{
+height:80px;
+
+}
+tr:nth-child(even) td { background: #F1F1F1; } 
+ 
+
+/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */ 
+tr:nth-child(odd) td { background: #FEFEFE; }  
+
+tr td:hover { background: #F9F0E9; color: black;
+border-bottom:1px solid  #BEECC3; } /* Hover cell effect! */
+tr:first-child td{
+
+font-size:20px;
+background:#20457C;
+color:white;
+ 
+
+} 
+tr:first-child{
+height:40px;
+margin-bottom:5px;
+}
+#bulb{
+    margin-top: -44px;
+    width: 64px;
+    margin-left: 240px;
+}
+#text_online{
+padding-left:20px;
+font-size:25px;
+   
+}
+#text_offline{
+padding-left:20px;
+font-size:25px;
+    margin-bottom: 20px;
+}
+#skill{
+height:30px;
+text-align:inline;
+
+}
+#skill select{
+margin-left:10px;
+}

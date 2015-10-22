@@ -69,11 +69,11 @@ class Login extends MX_Controller {
 		$this->load->view('register_footer');
 		}
 		else
-		redirect('<?php echo base_url(); ?>login');
+		redirect('login');
 	}
 	public function logout(){
 		$this->session->sess_destroy();
-		redirect('<?php echo base_url()?>login');
+		redirect('login');
 	}
 	public function sign_up(){
 		$this->load->view('register');
