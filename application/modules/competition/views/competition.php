@@ -29,8 +29,7 @@
             <div class="post">
                 <div class="post-img-content">
                     <img src="<?php echo base_url(); ?>/images/competition_default.jpg" class="img-responsive" />
-                    <span class="post-title"><b>Make a Image Blur Effects With</b><br />
-                        <b>CSS3 Blur</b></span>
+                    
                 </div>
                 <div class="content">
                     <div class="author">
@@ -52,8 +51,7 @@
             <div class="post">
                 <div class="post-img-content">
                     <img src="<?php echo base_url(); ?>/images/competition_default.jpg" class="img-responsive" />
-                    <span class="post-title"><b>Make a Image Blur Effects With</b><br />
-                        <b>CSS3 Blur</b></span>
+                    
                 </div>
                 <div class="content">
                     <div class="author">
@@ -75,8 +73,7 @@
             <div class="post">
                 <div class="post-img-content">
                     <img src="<?php echo base_url(); ?>/images/competition_default.jpg" class="img-responsive" />
-                    <span class="post-title"><b>Make a Image Blur Effects With</b><br />
-                        <b>CSS3 Blur</b></span>
+                    
                 </div>
                 <div class="content">
                     <div class="author">
@@ -110,8 +107,7 @@
             <div class="post">
                 <div class="post-img-content">
                     <img src="<?php echo base_url(); ?>/images/competition_default.jpg" class="img-responsive" />
-                    <span class="post-title"><b>Make a Image Blur Effects With</b><br />
-                        <b>CSS3 Blur</b></span>
+                    
                 </div>
                 <div class="content">
                     <div class="author">
@@ -133,8 +129,7 @@
             <div class="post">
                 <div class="post-img-content">
                     <img src="http://placehold.it/460x250/2980b9/ffffff&text=CSS3" class="img-responsive" />
-                    <span class="post-title"><b>Make a Image Blur Effects With</b><br />
-                        <b>CSS3 Blur</b></span>
+                    
                 </div>
                 <div class="content">
                     <div class="author">
@@ -156,8 +151,7 @@
             <div class="post">
                 <div class="post-img-content">
                     <img src="http://placehold.it/460x250/47A447/ffffff&text=jQuery" class="img-responsive" />
-                    <span class="post-title"><b>Make a Image Blur Effects With</b><br />
-                        <b>CSS3 Blur</b></span>
+                    
                 </div>
                 <div class="content">
                     <div class="author">

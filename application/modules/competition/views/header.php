@@ -9,7 +9,7 @@
 		<link href="<?php echo base_url(); ?>/css/main_page.css" rel="stylesheet">
 		<link href="<?php echo base_url(); ?>/css/header.css" rel="stylesheet">
 		<link href="<?php echo base_url(); ?>/css/user_post.css" rel="stylesheet">
-		<link href="<?php echo base_url(); ?>/css/profile_page.css" rel="stylesheet">
+		<link href="<?php echo base_url(); ?>/css/competition.css" rel="stylesheet">
 		<script src="<?php echo base_url(); ?>/js/profile_page.js"></script>
 		<script src="<?php echo base_url(); ?>/js/jquery.min.js"></script>
 		<script src="<?php echo base_url(); ?>/js/bootstrap.min.js"></script>

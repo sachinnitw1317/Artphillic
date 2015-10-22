@@ -20,6 +20,7 @@
 }
 .post .author
 {
+    margin-top: -60px;
     font-size: 11px;
     color: #737373;
     padding: 25px 30px 20px;
