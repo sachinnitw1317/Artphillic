@@ -9,8 +9,7 @@
 		<link href="<?php echo base_url(); ?>/css/main_page.css" rel="stylesheet">
 		<link href="<?php echo base_url(); ?>/css/header.css" rel="stylesheet">
 		<link href="<?php echo base_url(); ?>/css/user_post.css" rel="stylesheet">
-		<link href="<?php echo base_url(); ?>/css/dashboard.css" rel="stylesheet">
-		<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href="<?php echo base_url(); ?>/css/profile_page.css" rel="stylesheet">
 		<script src="<?php echo base_url(); ?>/js/profile_page.js"></script>
 		<script src="<?php echo base_url(); ?>/js/jquery.min.js"></script>
 		<script src="<?php echo base_url(); ?>/js/bootstrap.min.js"></script>
@@ -38,8 +37,8 @@
 	 				 
 	 			</ul>
 	 				<ul class="nav navbar-nav navbar-right">
-	 				<li><a href="<?php echo base_url(); ?>learn/practice.php">Learn</a></li>
-	 				<li><a href="<?php echo base_url(); ?>compete/compete.php">Competition</a></li>
+	 				<li><a href="<?php echo base_url(); ?>learn">Learn</a></li>
+	 				<li><a href="<?php echo base_url(); ?>competition">Competition</a></li>
 	 				<li><a href="<?php echo base_url(); ?>cart">Gallery</a></li>
 	 				<li class="dropdown" style="margin-top:-5px;">
 	 					<a href="<?php echo base_url(); ?>cartlogin" class="dropdown-toggle" data-toggle="dropdown"> <img src="<?php echo base_url(); ?>/images/flaticon/details/notification.png"><sup class="badge" style="margin-left:-5px;">4</sup></a>
@@ -56,7 +55,7 @@
 	 						<li><a href="<?php echo base_url(); ?>edit"><img src="<?php echo base_url(); ?>/images/header/edit.png"> Edit Profile</a></li>
 	 						<li><a href="<?php echo base_url(); ?>login/logout"><img src="<?php echo base_url(); ?>/images/header/logout.png"> Logout</a></li>
 	 					</ul>
-	 				</li>
+	 				</li>`
 	 			</ul>
 	 			<form class="navbar-form navbar-left" role="search" style="margin-left: 3%;" >
 	 				<div class="form-group">
