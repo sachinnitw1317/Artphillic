@@ -1,8 +1,8 @@
 <div class="row" style="font-family:lato;"> 
-	<div class="col-xs-20 col-sm-20 col-md-offset-2 col-md-20  col-lg-offset-2 col-lg-20">
-	<div class="col-md-24">
+    <div class="col-xs-20 col-sm-20 col-md-offset-2 col-md-20  col-lg-offset-2 col-lg-20">
+    <div class="col-md-24">
 <center id><h1>COMPETITIONS</h1>
-	<h3>Enroll in a competition, Show off your talent and win amazing prizes</h3>
+    <h3>Enroll in a competition, Show off your talent and win amazing prizes</h3>
 <form method="POST" id="search" action=" ">
 <select name="cate" onchange="submit()">
 <option value="0" name="cat">Choose a category</option>
@@ -15,7 +15,7 @@
 </select></form>
 </center>
 <br>
-		 <ul class="nav nav-justified nav-pills">
+         <ul class="nav nav-justified nav-pills">
             <li class="active"><a href="#past" data-toggle="tab">Past</a></li>
             <li ><a href="#running" data-toggle="tab">Running</a></li>
             <li ><a href="#upcomings" data-toggle="tab">Upcomings</a></li>
@@ -179,6 +179,6 @@
  
 
             </div> 
-	</div>
+    </div>
 </div>
 
