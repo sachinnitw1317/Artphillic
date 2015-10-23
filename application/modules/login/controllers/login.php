@@ -9,7 +9,7 @@ class Login extends MX_Controller {
 	}
 	public function viewer(){
 		$this->load->view('register');
-		$this->load->view('register_navbar');
+		//$this->load->view('register_navbar');
 		$this->load->view('register_body');
 		$this->load->view('register_footer');
 	}

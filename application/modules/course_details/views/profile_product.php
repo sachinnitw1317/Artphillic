@@ -48,6 +48,7 @@ echo "no POST found";
 </div><!-- col end -->
 <script type="text/javascript">
 	
+
  function change(img) {
     if (img.src.match("2.png")) {
     	img.src=img.src.replace("2.png","1.png");
@@ -67,7 +68,26 @@ echo "no POST found";
  	 	y.innerHTML=text;
  	 	count=1;
  	});
+ 	/*if(count==0){
+ 		var y = id.getElementsByTagName("span")[0];
+ 	 	var text=y.innerHTML;
+ 	 	text=Number(text)+1;
+ 	 	y.innerHTML=text;
+ 	 	count=1;
+ 	 	var posting = $.post( url, { post_id:post_id,post_username:post_username} );
+
+ 	}
+*/
  }
+
+
+/*$(document).ready(function(){
+    $(".likes").click(function(){
+        var text =$(this).find("span").html();
+        text=Number(text)+1;
+        $(this).find("span").html(text);
+    });
+});*/
 </script>
 
 <!--  $("#form_ajax").submit(function(event) {

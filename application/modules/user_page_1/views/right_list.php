@@ -7,7 +7,7 @@
 					<div >
 						<?php echo modules::run('following'); ?>
 					</div>
-<?php $username=$_SESSION['username']; ?>
+<?php $username=@$_SESSION['username']; ?>
 <?php $to=$this->uri->segment(3);?>
 					<div class="row">
 					  	<div class="col-xs-24 col-sm-24 col-md-24">
