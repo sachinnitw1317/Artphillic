@@ -39,7 +39,7 @@
           else 
           {
 
-          $target=GALLERY_UP.$_SESSION["userid"].$pname;
+          $target=GALLERY_UP.$_SESSION["username"].$pname;
           move_uploaded_file($temp, $target);
           }
         }

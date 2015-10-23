@@ -1,4 +1,25 @@
 <script src="<?php echo base_url(); ?>/js/profile_page.js"></script>
+<script type='text/javascript'>
+    $("#form_ajax").submit(function(event) {
+      event.preventDefault();
+      var $form = $( this ),
+      url = $form.attr( 'action' );
+      var post_t=document.getElementById("form_ajax").elements.namedItem("post_text").value;
+      var post_b="sachin";
+      var post_to="ketki";
+      var posting = $.post( url, { post_text:post_t, posted_by:post_b ,posted_on:post_to} );
+       posting.done(function( data ) {
+        $('#last').prepend('<div class="row post_box">\
+          <div class="col-md-3">\
+          you just posted\
+           </div>\
+          <div class="col-md-20">\
+         '+post_t +'\
+          </div>\
+          </div>');
+      });
+    });
+</script>
 <div class="col-xs-24 col-sm-24 col-md-13"><!--13 columns begin -->
   <div id="main"><!--main begin-->
         <div class="card hovercard">

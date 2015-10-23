@@ -10,8 +10,14 @@ class User_page_1 extends MX_Controller {
 	public function get_data(){
 		$this->load->model('mdl_user_page_1');
 		$this->load->model('following/mdl_following');
-		$following=$this->mdl_following->data();
-		$data['query']=$this->mdl_user_page_1->data($following);
+		if($this->uri->segment(3)){
+			$id=$this->uri->segment(3);
+		}
+		else
+		$id=$this->session->userdata('username');
+	
+		$following=$this->mdl_following->data($id);
+		$data['query']=$this->mdl_user_page_1->data($following,$id);
 		$this->load->view('main_page',$data);
 	}
 	 public function upload_text(){
@@ -34,11 +40,11 @@ class User_page_1 extends MX_Controller {
 		$this->load->model('mdl_user_page_1');
 		$id=$this->uri->segment(3);
 		if($id==$_SESSION['username']){
-			redirect('user_page_1',refresh);
+			redirect('profile_page',refresh);
 		}
 		else{
 			if($this->mdl_user_page_1->check_user($id)){
-				redirect("user_page/get_data/$id",refresh);
+				redirect("user_page_1/get_data/$id",refresh);
 			}
 			else
 				echo "failed";

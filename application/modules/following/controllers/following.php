@@ -9,11 +9,16 @@ class Following extends MX_Controller {
 
 	public function get_data(){
 		$this->load->model('mdl_following');
-		$data['query']=$this->mdl_following->data();
+		if($this->uri->segment(3)){
+			$id=$this->uri->segment(3);
+		}
+		else
+		$id=$this->session->userdata('username');
+	
+		$data['query']=$this->mdl_following->data($id);
 		$this->load->view('following',$data);
 
 	}
-
 	public function auto(){
 		$this->load->model('mdl_following');
 		$id=$this->uri->segment(3);

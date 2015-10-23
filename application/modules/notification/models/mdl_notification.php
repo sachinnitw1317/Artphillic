@@ -18,7 +18,7 @@ class Mdl_notification extends CI_Model {
         $data = $this->db->get('user_post');
       if($data->num_rows()>0){
             foreach ($data->result() as $key) {
-               $output.='<li><a href="http://localhost/artphilic/user_page/get_data/'.$key->posted_by.'">';
+               $output.='<li><a href="http://localhost/artphilic/profile_page/load_user/'.$key->posted_by.'">';
                $output.='<img class="img-circle" alt="profile_pic" width="20px" height="20px" src="http://localhost/artphilic/images/profile_pic/'.$key->posted_by.'.jpg">';
                $output.=''.$key->posted_by.' posted on profile page</li>';
 

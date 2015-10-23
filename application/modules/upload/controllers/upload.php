@@ -8,11 +8,11 @@ class Upload extends MX_Controller {
 	}
 
 	public function get_data(){
-		$this->load->model('mdl_upload');
+		/*$this->load->model('mdl_upload');
 		$this->load->model('following/mdl_following');
 		$following=$this->mdl_following->data();
-		$data['query']=$this->mdl_upload->data($following);
-		$this->load->view('main_page',$data);
+		$data['query']=$this->mdl_upload->data($following);*/
+		$this->load->view('main_page');
 	}
 	 public function upload_text(){
 	 	$this->load->model('mdl_upload');

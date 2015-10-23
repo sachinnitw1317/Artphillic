@@ -7,7 +7,7 @@ echo '<div class="row">
 foreach ($query->result() as $key) {
 
 	echo '<div class="col-sm-6 col-md-6 post_box">
-	            <a href="http://localhost/artphilic/user_page/get_data/'.$key->follower.'">
+	            <a href="http://localhost/artphilic/profile_page/load_user/'.$key->username.'">
 			    <img src="'.base_url().'/images/profile_pic/'.$key->username.'.jpg" alt="image" width="100%" height="60px" style="padding:4px;">
 			    </a>
 	    </div>';

@@ -7,9 +7,9 @@ class Mdl_following extends CI_Model {
         parent::__construct();
     }
 
-    function data(){
+    function data($id){
         $this->db->order_by("id", "desc");
-        $this->db->where('follower',$this->session->userdata('username'));
+        $this->db->where('follower',$id);
         $data = $this->db->get('followers');
         return $data;
     }

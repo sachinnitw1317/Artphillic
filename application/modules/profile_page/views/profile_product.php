@@ -7,7 +7,7 @@ if(($query->num_rows() > 0)){
 
 	echo '<div class="row post_box"  ><!--postbox  -->
 				<div class="col-md-3">
-				<br><a href="http://localhost/artphilic/user_page/get_data/'.$key->posted_by.'">
+				<br><a href="http://localhost/artphilic/profile_page/load_user/'.$key->posted_by.'">
 					<img src="'.base_url().'/images/profile_pic/'.$key->posted_by.'.jpg" class="img-circle" alt="profile_pic" width="60px" height="60px" >
 				</a>
 				</div>
@@ -15,7 +15,7 @@ if(($query->num_rows() > 0)){
 					<br>
 				 	<div class="row">
 				 		<div class="col-md-12">
-				 			<a href="http://localhost/artphilic/user_page/get_data/'.$key->posted_by.'"><h4>'.$key->posted_by.'</h4></a>
+				 			<a href="http://localhost/artphilic/profile_page/load_user/'.$key->posted_by.'"><h4>'.$key->posted_by.'</h4></a>
 				 		</div>
 				 		<h5 class="text-right">'.date("d-M-Y H:i a",strtotime($key->time)).'</h5>
 				 	</div>
@@ -25,6 +25,11 @@ if(($query->num_rows() > 0)){
 				 	<div class="row">
 				 	<br>
 					 	<ul class="list-inline list-images">
+
+					 	  <li class="likes" onclick="likes(this,\''.$key->id.'\',\''.$key->posted_by.'\')">
+						 	  <span>'.$key->likes.'</span>
+						 	  <img src="'.base_url().'/images/flaticon/upload/like1.png" onclick="change(this) ">
+					 	  </li>
 						  <li><img src="'.base_url().'/images/flaticon/upload/actor1.png" onclick="change(this)"></li>
 						  <li><img src="'.base_url().'/images/flaticon/upload/dancer1.png" onclick="change(this)"></li>
 						  <li><img src="'.base_url().'/images/flaticon/upload/director1.png" onclick="change(this)"></li>
@@ -53,5 +58,54 @@ echo "no POST found";
     }
  	
  }
+ function likes(id,post_id,post_username){
+ 	url="http://localhost/artphilic/likes";
+ 	var posting = $.post( url, { post_id:post_id,post_username:post_username} );
+ 	posting.done(function( data ) {
+ 	 	var y = id.getElementsByTagName("span")[0];
+ 	 	var text=y.innerHTML;
+ 	 	text=Number(text)+1;
+ 	 	y.innerHTML=text;
+ 	 	count=1;
+ 	});
+ 	/*if(count==0){
+ 		var y = id.getElementsByTagName("span")[0];
+ 	 	var text=y.innerHTML;
+ 	 	text=Number(text)+1;
+ 	 	y.innerHTML=text;
+ 	 	count=1;
+ 	 	var posting = $.post( url, { post_id:post_id,post_username:post_username} );
 
+ 	}
+*/
+ }
+
+
+/*$(document).ready(function(){
+    $(".likes").click(function(){
+        var text =$(this).find("span").html();
+        text=Number(text)+1;
+        $(this).find("span").html(text);
+    });
+});*/
 </script>
+
+<!--  $("#form_ajax").submit(function(event) {
+      event.preventDefault();
+      var $form = $( this ),
+      url = $form.attr( 'action' );
+      var post_t=document.getElementById("form_ajax").elements.namedItem("post_text").value;
+      var post_b="sachin";
+      var post_to="ketki";
+      var posting = $.post( url, { post_text:post_t, posted_by:post_b ,posted_on:post_to} );
+       posting.done(function( data ) {
+        $('#last').prepend('<div class="row post_box">\
+          <div class="col-md-3">\
+          you just posted\
+           </div>\
+          <div class="col-md-20">\
+         '+post_t +'\
+          </div>\
+          </div>');
+      });
+    }); -->

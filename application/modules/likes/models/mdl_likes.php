@@ -1,18 +1,28 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Mdl_user_page_1 extends CI_Model {
+class Mdl_likes extends CI_Model {
 
     function __construct()
     {
         parent::__construct();
     }
 
-    function data($following,$id){
-       $this->db->where('posted_by',$id);
-        foreach ($following->result() as $key) {
-        $this->db->or_where('posted_by', $key->username);
-        }
-        $this->db->order_by("time", "desc");
+    function post_likes($data)
+    {
+     $this->db->insert('post_likes', $data);
+     $this->db->where('id',$data['id']);
+     $query=$this->db->get('user_post');
+     foreach ($query->result() as $row)
+     {
+       $this->db->where('id',$data['id']);
+       $this->db->update('user_post',array('likes' => $row->likes + 1));
+     }
+
+
+    }
+
+  /*  function data(){
+        $this->db->order_by("id", "desc");
         $data = $this->db->get('user_post');
         return $data;
     }
@@ -31,5 +41,5 @@ class Mdl_user_page_1 extends CI_Model {
     function get_info($id){
         $data = $this->db->get_where('db_products', array('id' => $id));
         return $data;
-    }
+    }*/
 }

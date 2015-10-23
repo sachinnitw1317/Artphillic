@@ -2,8 +2,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 $this->load->view('header');
 $this->load->view('left_list');
-$this->load->view('cart_products');
- 
+$this->load->view('cart_products',$query);
+$this->load->view('right_list');
 
 ?>
 			<!--<li class="list-group-item">

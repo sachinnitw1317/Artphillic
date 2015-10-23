@@ -11,7 +11,8 @@ class Notification extends MX_Controller {
 	{	
 		$this->load->model('mdl_notification');
 		$this->load->model('following/mdl_following');
-		$following=$this->mdl_following->data();
+		$id=$this->session->userdata('username');
+		$following=$this->mdl_following->data($id);
 		$data['notification_list']=$this->mdl_notification->get_result($following);
 		$this->load->view('notification_results',$data);
 	}

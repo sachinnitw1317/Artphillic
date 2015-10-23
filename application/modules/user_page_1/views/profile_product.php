@@ -7,7 +7,7 @@ if(($query->num_rows() > 0)){
 
 	echo '<div class="row post_box"  ><!--postbox  -->
 				<div class="col-md-3">
-				<br><a href="http://localhost/artphilic/user_page/get_data/'.$key->posted_by.'">
+				<br><a href="http://localhost/artphilic/profile_page/load_user/'.$key->posted_by.'">
 					<img src="'.base_url().'/images/profile_pic/'.$key->posted_by.'.jpg" class="img-circle" alt="profile_pic" width="60px" height="60px" >
 				</a>
 				</div>
@@ -15,7 +15,7 @@ if(($query->num_rows() > 0)){
 					<br>
 				 	<div class="row">
 				 		<div class="col-md-12">
-				 			<a href="http://localhost/artphilic/user_page/get_data/'.$key->posted_by.'"><h4>'.$key->posted_by.'</h4></a>
+				 			<a href="http://localhost/artphilic/profile_page/load_user/'.$key->posted_by.'"><h4>'.$key->posted_by.'</h4></a>
 				 		</div>
 				 		<h5 class="text-right">'.date("d-M-Y H:i a",strtotime($key->time)).'</h5>
 				 	</div>

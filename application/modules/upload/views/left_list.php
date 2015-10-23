@@ -2,7 +2,7 @@
 <div class="col-md-6">
 All Your Stuff:<br>
 <?php 
-$tem=$_SESSION['userid'];
+$tem=$_SESSION['username'];
 $dbc=mysqli_connect('localhost','root','','galla') or die('error');
 $query="SELECT * FROM gallery WHERE artist='$tem'";
 $result=mysqli_query($dbc,$query);
