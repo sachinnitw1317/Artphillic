@@ -1,4 +1,4 @@
-	<div class="col-xs-24 col-sm-24 col-md-5 nopadding">
+<div class="col-xs-24 col-sm-24 col-md-6" style="padding-left:30px;">
 		<div class="list-group nopadding" id="left_details">
 				  <a href="#" class="list-group-item" data-toggle="collapse" data-target="#email_id" style="border: 0px solid transparent;"><div id="left_image"><img src="<?php echo base_url(); ?>/images/flaticon/details/email.png"></div>Email Id<img src="<?php echo base_url(); ?>/images/flaticon/left/plus.png"></a>
 				  <div id="email_id" class="collapse">

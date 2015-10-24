@@ -1,4 +1,4 @@
-</br></br></br></br><div class="row">
+</br></br></br></br><div class="row" style="overflow-x:hidden;">
    <div class="col-md-12">
        <img src='<?php echo base_url("/images/login.png"); ?>' class="img-responsive" alt="Image">
    </div>

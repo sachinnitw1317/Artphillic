@@ -11,17 +11,18 @@
 		<link href="<?php echo base_url(); ?>css/user_post.css" rel="stylesheet">
 		<link href="<?php echo base_url(); ?>css/cart.css" rel="stylesheet">
 		<link href="<?php echo base_url(); ?>css/profile_page.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 		<script src="<?php echo base_url(); ?>js/profile_page.js"></script>
 		<script src="<?php echo base_url(); ?>js/jquery.min.js"></script>
 		<script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
 		<script src="<?php echo base_url(); ?>js/search.js"></script>
 		<script src="<?php echo base_url(); ?>js/bootstrap-filestyle.min.js"></script>
 	</head>
-	<body id="main_body">
+	<body id="main_body" style="font-family:lato;font-size:14px;">
 	<div class="container-fluid nopadding"><!--container    -->
 	 <div class="row"><!--row    -->
 	 <!--navbar    -->
-	 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="height:60px;padding-bottom: 0px;margin-bottom: 0px;">
 	 		<!-- Brand and toggle get grouped for better mobile display -->
 	 		<div class="navbar-header">
 	 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -62,7 +63,7 @@
 	 			</ul>
 	 			<form class="navbar-form navbar-left" role="search" style="margin-left: 3%;" id="search_form" >
 	 			 <div class="input-group">
-				      <input type="text" class="form-control" placeholder="Find him/her" style="width: 150px; -webkit-transition: width 0.4s; transition: width 0.4s;" onkeyup="sethint(this.value)" name="search">
+				      <input type="text" class="form-control" placeholder="Find him/her" style="width: 200px; -webkit-transition: width 0.4s; transition: width 0.4s;" onkeyup="sethint(this.value)" name="search">
 				      <span class="input-group-btn">
 				   <button class="btn btn-success" type="button"><img src="<?php echo base_url(); ?>images/header/search.png" width="20px" height="18px"></button>
 				      </span>
@@ -98,7 +99,7 @@
 		});
 
 	     $("input[name='search']").focusout(function(){
-	     	$(this).css("width","150px");
+	     	$(this).css("width","200px");
     		$("#txtHint").css("opacity","0");
 		});
 	 });

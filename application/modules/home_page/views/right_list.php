@@ -1,5 +1,10 @@
-	<div class="col-xs-24 col-sm-24 col-md-5" style="margin-left: 15px;"><!--right list begin  -->
-				  
+	<div class="col-xs-24 col-sm-24 col-md-4" style="margin-left:8px;"><!--right list begin  -->
+				    <div id="info" style="background-color:#f1f1f1;height:auto;padding:5px;font-size:13px;">
+            <img src="<?php echo base_url(); ?>/images/flaticon/details/objective.png" style="float:left;"><h4 style="margin-top: 5px;margin-left: 33px;"><a>Targets</a></h4>
+               Earn 200 points and become a rokie.<br>
+               Share your art and earn points.<br>
+               Upload your art to Gallery and be a part of society.<br>
+            </div>
 					<div>
 							<?php echo modules::run('followers'); ?>
 					</div>
@@ -8,91 +13,7 @@
 					<div>
 						<?php echo modules::run('following'); ?>
 					</div>
-           <div class="row">
-        <div class="col-xs-24 col-md-24" style="background-color:white;">
-            <div class="">
-                <div class="row">
-                    <div class="col-xs-24 col-md-24 text-center">
-                        <h1 class="rating-num">
-                            4.0</h1>
-                        <div class="rating">
-                            <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
-                            </span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
-                            </span><span class="glyphicon glyphicon-star-empty"></span>
-                        </div>
-                        <div>
-                            <span class="glyphicon glyphicon-user"></span>1,050,008 total
-                        </div>
-                    </div>
-                    <div class="col-xs-24 col-md-24">
-                        <div class="row rating-desc">
-                            <div class="col-xs-6 col-md-6 text-right">
-                                <span class="glyphicon glyphicon-star"></span>5
-                            </div>
-                            <div class="col-xs-16 col-md-18">
-                                <div class="progress progress-striped">
-                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
-                                        aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                        <span class="sr-only">80%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end 5 -->
-                            <div class="col-xs-6 col-md-6 text-right">
-                                <span class="glyphicon glyphicon-star"></span>4
-                            </div>
-                            <div class="col-xs-16 col-md-18">
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
-                                        aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                        <span class="sr-only">60%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end 4 -->
-                            <div class="col-xs-6 col-md-6 text-right">
-                                <span class="glyphicon glyphicon-star"></span>6
-                            </div>
-                            <div class="col-xs-16 col-md-18">
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
-                                        aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                        <span class="sr-only">40%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end 6 -->
-                            <div class="col-xs-6 col-md-6 text-right">
-                                <span class="glyphicon glyphicon-star"></span>2
-                            </div>
-                            <div class="col-xs-16 col-md-18">
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20"
-                                        aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                        <span class="sr-only">20%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end 2 -->
-                            <div class="col-xs-6 col-md-6 text-right">
-                                <span class="glyphicon glyphicon-star"></span>1
-                            </div>
-                            <div class="col-xs-16 col-md-18">
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80"
-                                        aria-valuemin="0" aria-valuemax="100" style="width: 15%">
-                                        <span class="sr-only">15%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end 1 -->
-                        </div>
-                        <!-- end row -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+       
 	</div><!--rightlist end   -->
 	<script>
 	 $("#message_box").submit(function(event) {

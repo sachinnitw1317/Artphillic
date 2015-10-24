@@ -1,4 +1,4 @@
-<div class="col-xs-24 col-sm-24 col-md-5">
+<div class="col-xs-24 col-sm-24 col-md-6" style="padding-left:30px;">
 		<div class="list-group" id="left_details">
 				  <a href="#" class="list-group-item" data-toggle="collapse" data-target="#about_me" ><div id="left_image"><img src="<?php echo base_url(); ?>/images/flaticon/details/about.png"></div> About me <img src="<?php echo base_url(); ?>/images/flaticon/left/plus.png"></a>
 				  <div id="about_me" class="collapse">

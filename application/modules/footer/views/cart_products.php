@@ -37,7 +37,7 @@
       <h3>Policy</h3>
               <a href="<?php echo base_url(); ?>rate"><img src="<?php echo base_url(); ?>/images/flaticon/details/rate.png"style="width:16px;margin: 3px;margin-right: 8px;">Rating</a>
               <br>
-              <a href="<?php echo base_url(); ?>star"><img src="<?php echo base_url(); ?>/images/flaticon/details/star.png"style="width:16px;margin: 3px;margin-right: 8px;">Star</a>
+              <a href="<?php echo base_url(); ?>star"><img src="<?php echo base_url(); ?>/images/flaticon/details/star.png"style="width:16px;margin: 3px;margin-right: 8px;">Points</a>
               <br>
                <a href="<?php echo base_url(); ?>privacy"><img src="<?php echo base_url(); ?>/images/flaticon/details/law.png"style="width:16px;margin: 3px;margin-right: 8px;"> Privacy Policy</a> <br>
                <a href="<?php echo base_url(); ?>terms"><img src="<?php echo base_url(); ?>/images/flaticon/details/terms.png"style="width:16px;margin: 3px;margin-right: 8px;">Terms of Use</a>
