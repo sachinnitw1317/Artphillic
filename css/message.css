@@ -1,0 +1,10 @@
+#msg{
+	max-height: 300px;
+	overflow-y:scroll; 
+	overflow-x:hidden;
+	padding: 5px;
+}
+.box{
+	border: 1px solid rgba(177, 178, 179,1); 
+	border-radius: 5px;
+}

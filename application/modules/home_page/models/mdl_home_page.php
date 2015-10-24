@@ -1,17 +1,17 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Mdl_user_page_1 extends CI_Model {
+class Mdl_Home_page extends CI_Model {
 
     function __construct()
     {
         parent::__construct();
     }
 
-    function data($id){
-       $this->db->where('posted_by',$id);
-       /* foreach ($following->result() as $key) {
+    function data($following){
+        $this->db->where('posted_by',$this->session->userdata('username'));
+        foreach ($following->result() as $key) {
         $this->db->or_where('posted_by', $key->username);
-        }*/
+        }
         $this->db->order_by("time", "desc");
         $data = $this->db->get('user_post');
         return $data;

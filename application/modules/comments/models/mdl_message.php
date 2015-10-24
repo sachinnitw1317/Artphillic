@@ -1,30 +1,26 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Mdl_notification extends CI_Model {
+class Mdl_comments extends CI_Model {
 
     function __construct()
     {
         parent::__construct();
     }
 
-    function get_result($following)
+    function get_result($id)
     {
         $output="";
-        $this->db->where('posted_by',$this->session->userdata('username'));
-        foreach ($following->result() as $key) {
-        $this->db->or_where('posted_by', $key->username);
-        }
-        $this->db->order_by("time", "desc");
-        $data = $this->db->get('user_post');
-      if($data->num_rows()>0){
-            foreach ($data->result() as $key) {
-               $output.='<li id="od"><a href="http://localhost/artphilic/profile_page/load_user/'.$key->posted_by.'">';
-               $output.='<img  alt="profile_pic" width="30px" height="30px" src="http://localhost/artphilic/images/profile_pic/'.$key->posted_by.'.jpg">';
-               $output.=''.$key->posted_by.' posted on profile page</li>';
+        $this->db->where('id',$id);
+       /* $this->db->where(array('from' => $from,'to'=>$to));
+        $this->db->or_where(array('from' => $to,'to'=>$from));*/
+        $this->db->order_by('time','asc');
+        $data = $this->db->get('comments');
+        return $data;
+    }
 
-            }
-            return $output;
-        }
+    public function post_comments($data)
+    {
+        $this->db->insert('comments',$data);
     }
 }
        /* $query=$this->db->get('users');

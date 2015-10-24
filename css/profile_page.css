@@ -1,5 +1,11 @@
 .list-group a img{
 	float:right;
+    width:17px;
+    height:10px;
+
+}
+.nav-pills li.active a,.nav-pills li.active a:hover{
+    background-color: cadetblue;
 }
 body{
 	overflow-x:hidden;
@@ -8,14 +14,37 @@ body{
 #left_details .collapse{
 	padding: 5px;
 }
+/*.list-group>.list-group-item{
+border-top: 1px solid white;
+border-left: 1px solid white;
+border-bottom: 1px solid black;
+border-right: 1px solid black;
+}
+*/
+.list-group>.list-group-item{
+    margin: 0px;
+    border: 0px;
+}
+
+.double li{
+    padding: 0px;
+    background-color: white;
+    border: 0px;!important
+}
+#cd li .active{
+    background-color: blue;
+}
+
+
 #left_image img{
 	float: left;
-	padding: 5px;
-	padding-top: 0px;
+     width: 18px;
+    height: 18px;
+    margin-right: 8px;
 }
 /* USER PROFILE PAGE */
  .card {
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 30px;
     background-color: rgba(214, 224, 226, 0.2);
     -webkit-border-top-left-radius:5px;
@@ -41,8 +70,8 @@ body{
 }
 .card-background img {
     -webkit-filter: blur(25px);
-    -moz-filter: blur(25px);
-    -o-filter: blur(25px);
+    -moz-filter: blur(30px);
+    -o-filter: blur(30px);
     -ms-filter: blur(25px);
     filter: blur(25px);
     margin-left: -100px;
@@ -141,11 +170,12 @@ body{
 }
 #notify{
     position:absolute;
-    left: -26%;
+ 
     top: 62px;
-    width: 26%;
+    width: 300px;
     max-height:300px;
     list-style: none;
     background-color: white;
-    overflow-y: auto;
+    overflow-y: scroll;
+    overflow-x:hidden;
 }

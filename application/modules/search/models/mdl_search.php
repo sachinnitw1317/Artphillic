@@ -16,9 +16,9 @@ class Mdl_search extends CI_Model {
             $output="";
             foreach ($query->result() as $key) {
                 $imageURL="http://localhost/artphilic/images/profile_pic/'.$key->username.'.jpg";
-               $output.='<li><a href="http://localhost/artphilic/user_page_1/get_data/'.$key->username.'">';
-               $output.='<img class="img-circle" alt="profile_pic" width="20px" height="20px" src="http://localhost/artphilic/images/profile_pic/'.$key->username.'.jpg">';
-               $output.=''.$key->username.'</li>';
+               $output.='<li style="margin:2px 0px;padding:5px 0px;"><a href="http://localhost/artphilic/profile_page/load_user/'.$key->username.'">';
+               $output.='<img class="img-circle" alt="profile_pic" width="25px" height="25px" src="http://localhost/artphilic/images/profile_pic/'.$key->username.'.jpg">';
+               $output.=''.$key->username.'<img style="margin-right:5px;float:right;" class="img-circle"  alt="profile_pic" width="25px" height="25px" src="http://localhost/artphilic/images/profile_pic/'.$key->username.'.jpg"></li>';
             }
             return $output;
         }

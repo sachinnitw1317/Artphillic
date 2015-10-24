@@ -1,40 +1,12 @@
 <script src="<?php echo base_url(); ?>/js/profile_page.js"></script>
-<div class="col-xs-24 col-sm-24 col-md-13"  style="padding: 20px; padding-top: 0px;"><!--13 columns begin -->
+<div class="col-xs-24 col-sm-24 col-md-12" style="padding: 20px; padding-top: 0px;"><!--13 columns begin -->
   <div id="main"><!--main begin-->
-        <div class="card hovercard" style="margin-top:0px;">
-            <div class="card-background">
-                <img id="photo" title=""  src="<?php echo base_url(); ?>images/profile_pic/<?php echo $this->uri->segment(3); ?>.jpg"/>
-           </div>
-            <div class="useravatar">
-                <a href= src="<?php echo base_url(); ?>images/profile_pic/<?php echo $this->uri->segment(3); ?>.jpg" title="Name" data-gallery>
-                <img alt="" src="<?php echo base_url(); ?>images/profile_pic/<?php echo $this->uri->segment(3); ?>.jpg"  ></a>
-            </div>
-        </div> 
-        <ul class="nav nav-justified nav-pills">
-           <li class="active"><a href="#ifeed" data-toggle="tab">Posts</a></li>
-           <li ><a href="#iphot" data-toggle="tab">Photos</a></li>
-           <li ><a href="#ivideo" data-toggle="tab">Videos</a></li>
-       </ul>
-    <div class="tab-content"><!--tabs content begin    -->
-        <div class="tab-pane fade in active" id="ifeed">
-         
-                  <?php  $this->load->view('profile_product');  ?>
-              </div>
-       
-       
-            <div class="tab-pane fade " id="iphot" >
-            <?php  echo modules::run('profile_page_photos');?>
-            </div>
-            <div class="tab-pane fade in" id="ivideo">
-            <?php  echo modules::run('profile_page_videos');?>
-            </div>
-
-    </div><!--tab content ends here-->
-
-
+           <?php  $this->load->view('profile_product');  ?>
   </div><!--main end here-->
-
+</div>
 <script type='text/javascript'>
+$(":file").filestyle({buttonName: "btn-info"});
+
     $("#form_ajax").submit(function(event) {
       event.preventDefault();
       var $form = $( this ),

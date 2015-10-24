@@ -25,14 +25,3 @@ setInterval(function()
         xmlhttp.open("GET", "http://localhost/artphilic/notification", true);
         xmlhttp.send(); 
   },500);
-setInterval(function()
-  {
-    var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById("noti_num").innerHTML = xmlhttp.responseText;
-            }
-        }
-        xmlhttp.open("GET", "notification_num.php", true);
-        xmlhttp.send(); 
-  },5000);

@@ -9,15 +9,15 @@ class User_page_1 extends MX_Controller {
 
 	public function get_data(){
 		$this->load->model('mdl_user_page_1');
-		$this->load->model('following/mdl_following');
+		//$this->load->model('following/mdl_following');
 		if($this->uri->segment(3)){
 			$id=$this->uri->segment(3);
 		}
 		else
 		$id=$this->session->userdata('username');
 	
-		$following=$this->mdl_following->data($id);
-		$data['query']=$this->mdl_user_page_1->data($following,$id);
+		//$following=$this->mdl_following->data($id);
+		$data['query']=$this->mdl_user_page_1->data($id);
 		$this->load->view('main_page',$data);
 	}
 	 public function upload_text(){
