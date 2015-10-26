@@ -1,14 +1,24 @@
-	<div class="col-xs-24 col-sm-24 col-md-5" style="margin-left: 15px;"><!--right list begin  -->
-				  
+	<div class="col-xs-24 col-sm-24 col-md-4 col-lg-4 ">
+				 	<div class="panel panel-primary">
+						<div class="panel-heading">
+						    <h3 class="panel-title">Notification</h3></div>
+						  <div class="list-group">
+								  <a href="#"  class="list-group-item" data-toggle="popover" data-trigger="hover" data-placement="left" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">hover</a>
+								   <a href="#"  class="list-group-item" data-toggle="popover" data-trigger="hover" data-placement="left" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">notes</a>
+								   <a href="#"  class="list-group-item" data-toggle="popover" data-trigger="hover" data-placement="left" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">adds</a>
+								   <a href="#"  class="list-group-item" data-toggle="popover" data-trigger="hover" data-placement="left" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">click</a>
+								   <a href="#"  class="list-group-item" data-toggle="popover" data-trigger="hover" data-placement="left" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">last</a>
+							</div>
+					</div>
 					<div>
-							<?php echo modules::run('followers'); ?>
+						<button class="btn btn-primary col-xs-24 col-sm-24 col-md-24 col-lg-24" type="button">Follower&nbsp&nbsp<span class="badge">4</span></button>
 					</div>
 					</br>
 					</br>
 					<div>
-						<?php echo modules::run('following'); ?>
+						<button class="btn btn-primary col-xs-24 col-sm-24 col-md-24 col-lg-24" type="button">Following &nbsp &nbsp<span class="badge">4</span></button>
 					</div>
-	</div><!--rightlist end   -->
+	</div>
 	<script>
 		$(document).ready(function(){
 	    	$('[data-toggle="tooltip"]').tooltip(); 

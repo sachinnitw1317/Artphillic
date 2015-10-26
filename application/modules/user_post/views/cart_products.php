@@ -21,14 +21,20 @@ echo '<div class="row post_box" >
 			 	</div>
 			 	<div class="row">
 			 	<br>
-				 	<ul class="list-inline list-images">
-					  <li><img src="'.base_url().'/images/flaticon/upload/actor1.png" onclick="change(this)"></li>
-					  <li><img src="'.base_url().'/images/flaticon/upload/dancer1.png" onclick="change(this)"></li>
-					  <li><img src="'.base_url().'/images/flaticon/upload/director1.png" onclick="change(this)"></li>
-					  <li><img src="'.base_url().'/images/flaticon/upload/musician1.png" onclick="change(this)"></li>
-					  <li><img src="'.base_url().'/images/flaticon/upload/painter1.png" onclick="change(this)"></li>
-					  <li><img src="'.base_url().'/images/flaticon/upload/writer1.png" onclick="change(this)"></li>
-					</ul>
+				 						 	<div class="row">
+					 	<ul class="list-inline list-images">
+					 	  <li class="col-md-6 likes" onclick="likes(this,\''.$key->id.'\',\''.$key->posted_by.'\')">
+						 	  <span>'.$key->likes.'</span>
+						 	  <img src="'.base_url().'/images/flaticon/upload/like1.png" onclick="change(this) ">
+					 	  </li>
+						  <li><img src="'.base_url().'/images/flaticon/upload/actor1.png" onclick="change(this)"></li>
+						  <li><img src="'.base_url().'/images/flaticon/upload/dancer1.png" onclick="change(this)"></li>
+						  <li><img src="'.base_url().'/images/flaticon/upload/director1.png" onclick="change(this)"></li>
+						  <li><img src="'.base_url().'/images/flaticon/upload/musician1.png" onclick="change(this)"></li>
+						  <li><img src="'.base_url().'/images/flaticon/upload/painter1.png" onclick="change(this)"></li>
+						  <li><img src="'.base_url().'/images/flaticon/upload/writer1.png" onclick="change(this)"></li>
+						</ul>
+                    </div>		
 			 	</div>
 		 </div>
 	</div>';

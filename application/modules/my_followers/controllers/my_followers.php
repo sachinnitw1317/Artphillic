@@ -10,7 +10,12 @@ class My_followers extends MX_Controller {
 	public function get_data(){
 		$this->load->model('mdl_my_followers');
 		$this->load->model('following/mdl_following');
-		$following=$this->mdl_following->data();
+		if($this->uri->segment(3)){
+			$id=$this->uri->segment(3);
+		}else{
+			$id=$_SESSION['username'];
+		}
+		$following=$this->mdl_following->data($id);
 		$data['query']=$this->mdl_my_followers->data($following);
 		$this->load->view('main_page',$data);
 	}

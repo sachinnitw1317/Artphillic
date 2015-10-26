@@ -1,4 +1,4 @@
-?php $this->load->view('header');   ?>
+<?php $this->load->view('header');   ?>
 <div class="row">
 	<div class="col-xs-2 col-sm-2 col-md-2 col-lg-offset-1 col-lg-3" id="spy">
 		 <ul class="nav nav-pills nav-stacked " >

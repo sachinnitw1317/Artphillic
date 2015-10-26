@@ -22,26 +22,24 @@ if(($query->num_rows() > 0)){
 					 	<p class="text-justify">'.$key->post_text.'</p>
 				 	</div>
 				 	<div class="row">
-				 	<div class="col-md-10">
+				 	<div class="col-md-24">
 				 	<br>
+				 	<div class="row">
 					 	<ul class="list-inline list-images">
-
-					 	  
+					 	  <li class="col-md-6 likes" onclick="likes(this,\''.$key->id.'\',\''.$key->posted_by.'\')">
+						 	  <span>'.$key->likes.'</span>
+						 	  <img src="'.base_url().'/images/flaticon/upload/like1.png" onclick="change(this) ">
+					 	  </li>
 						  <li><img src="'.base_url().'/images/flaticon/upload/actor1.png" onclick="change(this)"></li>
 						  <li><img src="'.base_url().'/images/flaticon/upload/dancer1.png" onclick="change(this)"></li>
 						  <li><img src="'.base_url().'/images/flaticon/upload/director1.png" onclick="change(this)"></li>
 						  <li><img src="'.base_url().'/images/flaticon/upload/musician1.png" onclick="change(this)"></li>
 						  <li><img src="'.base_url().'/images/flaticon/upload/painter1.png" onclick="change(this)"></li>
 						  <li><img src="'.base_url().'/images/flaticon/upload/writer1.png" onclick="change(this)"></li>
-						  
-						   	</ul>
+						</ul>
+                    </div>
 				 	</div>
-				 	<ul class="list-inline list-images col-md-6" onclick="likes(this,\''.$key->id.'\',\''.$key->posted_by.'\')">
-				 	 <br>     <li class="likes"
-						 	  <span>'.$key->likes.'</span>
-						 	  <img src="'.base_url().'/images/flaticon/upload/like1.png" onclick="change(this) ">
-					 	       </li>
-				 	</ul>
+				 	 
 				 	</div>
 				 	<div id="comments">
 				 	</div>
@@ -90,7 +88,6 @@ echo "no POST found";
 </script>
 <script>
 function get_message() {
-	alert("kkk");
 		        var xmlhttp = new XMLHttpRequest();
 		        xmlhttp.onreadystatechange = function() {
 		            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {

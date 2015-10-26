@@ -24,7 +24,10 @@
 			</div>
 			<div class="row">
 				 <div class="col-md-12">
-				 <a href="<?php echo base_url(); ?>rate">Rating:</a>
+				 <a href="<?php echo base_url(); ?>rate">Rating:</a> <?php 
+foreach ($query->result() as $key) {
+     $rate=$sum/5;
+      echo rate;}?>
 				 </div>
 				 <div class="col-md-12">
 				 <a href="<?php echo base_url(); ?>star"><img src="<?php echo base_url(); ?>/images/flaticon/details/star.png"> Points:</a>

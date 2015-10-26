@@ -9,20 +9,10 @@ class Learn extends MX_Controller {
 
 	public function get_data(){
 		$this->load->model('mdl_learn');
-		$this->load->model('following/mdl_following');
-		$following=$this->mdl_following->data();
-		$data['query']=$this->mdl_learn->data($following);
+		$data['query']=$this->mdl_learn->data();
 		$this->load->view('main_page',$data);
-	}
-	 public function upload_text(){
-	 	$this->load->model('mdl_learn');
-	 	$data['query'] = array(
-	 	'post_text' => $this->input->post('post_text'),
-	 	'posted_by' => $_SESSION['username'],
-	 	);
-	 	$this->mdl_learn->update($data['query']);
-	 }
 
+	}
 
 	public function auto(){
 		$this->load->model('mdl_learn');
@@ -30,23 +20,6 @@ class Learn extends MX_Controller {
 		$data['query']=$this->mdl_learn->get_info($id);
 		$this->load->view('product_page',$data);
 	}
-	public function load_user(){
-		$this->load->model('mdl_learn');
-		$id=$this->uri->segment(3);
-		if($id==$_SESSION['username']){
-			redirect('Learn',refresh);
-		}
-		else{
-			if($this->mdl_learn->check_user($id)){
-				redirect("user_page/get_data/$id",refresh);
-			}
-			else
-				echo "failed";
-		}
-	}
-
-
-
 
 	public function about(){
 		$this->load->view('about_us');

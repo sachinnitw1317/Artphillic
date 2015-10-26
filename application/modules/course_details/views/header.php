@@ -108,7 +108,6 @@
 	 $(document).ready(function()
 	 {
 	     $(".img-circle").error(function(){
-	     	alert("error");
 	         $(this).attr('src', 'http://localhost/artphilic/images/profile_pic/default.png');
 	     });
 	 });

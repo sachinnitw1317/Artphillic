@@ -29,7 +29,6 @@ class User_page_1 extends MX_Controller {
 	 	$this->mdl_user_page_1->update($data['query']);
 	 }
 
-
 	public function auto(){
 		$this->load->model('mdl_user_page_1');
 		$id=$this->uri->segment(3);

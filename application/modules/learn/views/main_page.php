@@ -1,15 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 $this->load->view('header');
- 
-$this->load->view('cart_products',$query);
- 
+$this->load->view('cart_products');
 
 ?>
-			<!--<li class="list-group-item">
-				<span class="badge">5</span>
-				GOLD
-			</li>-->
 </div>
 </div>
 </body>

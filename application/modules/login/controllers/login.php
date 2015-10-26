@@ -62,11 +62,8 @@ class Login extends MX_Controller {
 	}
 
 	public function member(){
-		if($this->session->userdata('logged_in')){
-		$this->load->view('register');
-		$this->load->view('register_navbar_member');
-		$this->load->view('register_body_member');
-		$this->load->view('register_footer');
+		if(1){
+		redirect('home_page');
 		}
 		else
 		redirect('login');
@@ -117,6 +114,7 @@ class Login extends MX_Controller {
 				'logged_in'=>1,
 				);
 			$this->session->set_userdata($data);
+			echo modules::run("rating/add_user",$data['username']);
 			$this->member();
 		}
 		    else

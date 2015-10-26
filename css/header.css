@@ -21,18 +21,36 @@
 .badge{
 	background-color: CadetBlue;
 }
+#box{
+	border: 1px solid #C0C0C0;
+}
+#msg{
+	max-height: 75px;
+
+}
+.glyphicon-star{
+	color: #F0AD4E;
+	border-color: #EEA236;
+}
 #follow{
 	height: 90px;
 	overflow: hidden;
 }
 
+.active #online-link{
+	background-color: #5CB85C;
+	color: white;
+}
+.active #offline-link{
+	background-color: #D9534F;
+	color: white;
+}
 
 
-
-
-
-
-
+mark{
+	color: #00BFF3;
+	background-color: white;
+}
 
 
 

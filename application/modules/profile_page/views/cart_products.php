@@ -1,13 +1,15 @@
 <script src="<?php echo base_url(); ?>/js/profile_page.js"></script>
-<div class="col-xs-24 col-sm-24 col-md-13" style="padding: 20px; padding-top: 0px;padding-right:5px;"><!--13 columns begin -->
+<div class="col-xs-24 col-sm-24 col-md-13"><!--13 columns begin -->
   <div id="main"><!--main begin-->
-        <div class="card hovercard" style="margin-top:0px;">
+        <div class="card hovercard">
             <div class="card-background">
-                <img id="photo" title="" src="<?php echo base_url(); ?>images/profile_pic/<?php echo $_SESSION['username']; ?>.jpg" />
+                <img id="photo" title="" src="<?php echo base_url(); ?>/images/profile_pic/<?php echo $_SESSION['username']; ?>.jpg" />
            </div>
             <div class="useravatar">
-              <a href="<?php echo base_url(); ?>images/profile_pic/<?php echo $_SESSION['username']; ?>.jpg" title="Name" data-gallery>
-                <img alt="" src="<?php echo base_url(); ?>images/profile_pic/<?php echo $_SESSION['username']; ?>.jpg"  ></a>
+              <a href="<?php echo base_url(); ?>/images/profile_pic/<?php echo $_SESSION['username']; ?>.jpg" title="Name" data-gallery>
+                <img alt="" src="<?php echo base_url(); ?>/images/profile_pic/<?php echo $_SESSION['username']; ?>.jpg" ></a>
+            </div>
+            <div class="card-info"> <span class="card-title"></span>
             </div>
         </div> 
         <ul class="nav nav-justified nav-pills">
@@ -17,74 +19,41 @@
        </ul>
     <div class="tab-content"><!--tabs content begin    -->
         <div class="tab-pane fade in active" id="ifeed">
-        <div id="b_right" style="right: 22px;    top: 209px;">
-            <ul class="nav double" style="width: 100%;  margin: auto;" id="cd">
-              <li class="active"><a href="#post" data-toggle="tab" style="padding: 0px;"><img src="<?php echo base_url(); ?>/images/flaticon/upload/post.png"></a></li>
-              <li ><a href="#picture" data-toggle="tab"style="padding: 0px;"><img src="<?php echo base_url(); ?>/images/flaticon/upload/picture.png"></a></li>
-              <li ><a href="#video" data-toggle="tab"style="padding: 0px;"><img src="<?php echo base_url(); ?>/images/flaticon/upload/video.png"></a></li>
-            </ul>
-        </div>
-          <div class="row"> 
-            <div class="col-xs-23 col-sm-23 col-md-23 col-lg-23">
-              
-              <div class="tab-content"   style="margin-top:9px;">
-                  
-                  <div class="tab-pane fade in active" id="post">  
-                    <form action="<?php echo base_url(); ?>profile_page/upload_text" method="POST" role="form" id="form_ajax" name="form_ajax">
-                        <textarea name="post_text" id="input" class="form-control" rows="3" required="required"></textarea>
-                       <button type="submit" class="btn btn-danger" style="margin-top: 5px;">Submit</button>
-                     </form>
-                  </div>
-
-                  <div class="tab-pane fade " id="picture">
-                   <form method="post" action=" " style="padding-top: 20px;" enctype="multipart/form-data">
-                      <div class="row">
-                          <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                            </br>
-                          </div>
-                          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <input type="file" class="filestyle" id="files" name="photos_upload[]" id="iupload" title="upload"
-                            multiple onchange="readImagesAndPreview(this.files);" data-buttonName="btn-primary">
-                          </div>
-                           <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                              <button type="submit" name="mphoto" value=" " class="btn btn-default">
-                                  upload
-                             </button>
-                           </div>
-                      </div>
-                    </form>
-                  </div>
-
-                  <div class="tab-pane fade " id="video">
-                    <form method="post" action=" " style="padding-top: 20px;"enctype="multipart/form-data">
-                      <div class="row">
-                          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                            </br>
-                          </div>
-                          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            
-                            <input type="file" class="filestyle" id="files" name="photos_upload[]" id="iupload" title="upload"
-                            multiple onchange="readImagesAndPreview(this.files);" data-buttonName="btn-primary">
-                            <h4 style="text-align:center">or</h4>
-
-                            <input type="url" name="video" id="inputVideo" class="form-control" value="" title="" placeholder="Enter url of your video">
-                          </div>
-                           <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                              <button type="submit" name="mvideo" value=" " class="btn btn-warning" 
-                              style="margin-top: 73px; margin-left: 129px;padding-left: 27px; padding-right: 27px;">
-                                  upload
-                             </button>
-                           </div>
-                      </div>
-                    </form>
-                  </div>
-                  
+                <div id="b_right">
+                  <ul class="nav nav-tabs" style="width: 100%;  margin: auto;">
+                    <li class="active"><a href="#post" data-toggle="tab" style="padding: 0px;"><img src="<?php echo base_url(); ?>/images/flaticon/upload/post.png"></a></li>
+                    <li ><a href="#picture" data-toggle="tab"style="padding: 0px;"><img src="<?php echo base_url(); ?>/images/flaticon/upload/picture.png"></a></li>
+                    <li ><a href="#video" data-toggle="tab"style="padding: 0px;"><img src="<?php echo base_url(); ?>/images/flaticon/upload/video.png"></a></li>
+                  </ul>
               </div>
-            </div>
-                </br>
-                </br>
-          </div>
-           <?php  $this->load->view('profile_product');  ?>
+              <div class="tab-content">
+              
+                <div class="tab-pane fade in active" id="post">  
+                  <form action="<?php echo base_url(); ?>profile_page/upload_text" method="POST" role="form" id="form_ajax" name="form_ajax">
+                      <textarea name="post_text" id="input" class="form-control" rows="3" required="required"></textarea>
+                     <button type="submit" class="btn btn-primary">Submit</button>
+                   </form>
+                </div>
+
+                <div class="tab-pane fade " id="picture">
+                 <form method="post" action=" " style="padding-top: 50px;margin-left: 33%;" enctype="multipart/form-data">
+                      <input type="file" id="files" name="photos_upload[]" id="iupload" title="upload" multiple onchange="readImagesAndPreview(this.files);" value="">
+                       <button type="submit" name="mphoto" id="save_p" value=" ">
+                        <img src="<?php echo base_url(); ?>/images/flaticon/upload/upload.png"/>
+                       </button>
+                  </form>
+                </div>
+
+                <div class="tab-pane fade " id="video">
+                  <form method="post" action=" " style="padding-top: 50px;margin-left: 17%;"enctype="multipart/form-data">
+                      <input type="url" name="video" placeholder="Enter url of your video" size="50">
+                      <button type="submit" id="save_v" name="mvideo">
+                          <img src="<?php echo base_url(); ?>/images/flaticon/upload/upload.png"/>
+                      </button>
+                  </form>
+                </div>
+                  <?php  $this->load->view('profile_product');  ?>
+              </div>
         </div>
        
             <div class="tab-pane fade " id="iphot" >
@@ -100,8 +69,6 @@
   </div><!--main end here-->
 
 <script type='text/javascript'>
-$(":file").filestyle({buttonName: "btn-info"});
-
     $("#form_ajax").submit(function(event) {
       event.preventDefault();
       var $form = $( this ),
@@ -145,7 +112,6 @@ $(":file").filestyle({buttonName: "btn-info"});
            var Dat = Date.getDate();
            var Mnth = Date.getMonth();
            var Year = Date.getFullYear();
-
  <div class="col-xs-24 col-sm-24 col-md-24">
           <div class="col-md-3">
       <br>
