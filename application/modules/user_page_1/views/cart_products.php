@@ -3,11 +3,11 @@
   <div id="main"><!--main begin-->
         <div class="card hovercard" style="margin-top:0px;">
             <div class="card-background">
-                <img id="photo" title=""  src="<?php echo base_url(); ?>images/profile_pic/<?php echo $this->uri->segment(3); ?>.jpg"/>
+                <img id="photo" title=""  src="<?php echo base_url(); ?>images/profile_pic/<?php echo $user_pic; ?>"/>
            </div>
             <div class="useravatar">
-                <a href= src="<?php echo base_url(); ?>images/profile_pic/<?php echo $this->uri->segment(3); ?>.jpg" title="Name" data-gallery>
-                <img alt="" src="<?php echo base_url(); ?>images/profile_pic/<?php echo $this->uri->segment(3); ?>.jpg"  ></a>
+                <a href= src="<?php echo base_url(); ?>images/profile_pic/<?php echo $user_pic; ?>" title="Name" data-gallery>
+                <img alt="" src="<?php echo base_url(); ?>images/profile_pic/<?php echo $user_pic; ?>"  ></a>
             </div>
         </div> 
         <ul class="nav nav-justified nav-pills">
@@ -44,7 +44,7 @@
        posting.done(function( data ) {
         $('#last').prepend('<div class="row post_box">\
           <div class="col-md-3"><br>\
-              <img class="img-circle" alt="profile_pic" width="60px" height="60px" src="<?php echo base_url(); ?>/images/profile_pic/<?php echo $_SESSION['username']; ?>.jpg"/>\
+              <img class="img-circle" alt="profile_pic" width="60px" height="60px" src="<?php echo base_url(); ?>/images/profile_pic/<?php echo $user_pic; ?>.jpg"/>\
           </div>\
           <div class="col-md-20"><br>\
                 <div class="row">\

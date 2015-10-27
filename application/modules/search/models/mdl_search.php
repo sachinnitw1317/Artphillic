@@ -15,9 +15,16 @@ class Mdl_search extends CI_Model {
         if($query->num_rows()>0){
             $output="";
             foreach ($query->result() as $key) {
-                $imageURL="http://localhost/artphilic/images/profile_pic/'.$key->username.'.jpg";
+                $this->db->where('username',$key->username);
+                $user=$this->db->get('users')->row();
+                if($user->pic!="0"){
+                    $pic=$user->pic;
+                }
+                else{
+                    $pic="default.jpg";
+                }
                $output.='<li style="margin:2px 0px;padding:5px 0px;"><a href="http://localhost/artphilic/profile_page/load_user/'.$key->username.'">';
-               $output.='<img class="img-circle" alt="profile_pic" width="25px" height="25px" src="http://localhost/artphilic/images/profile_pic/'.$key->username.'.jpg">';
+               $output.='<img class="img-circle" alt="profile_pic" width="25px" height="25px" src="http://localhost/artphilic/images/profile_pic/'.$pic.'">';
                $output.=''.$key->username.'<img style="margin-right:5px;float:right;" class="img-circle"  alt="profile_pic" width="25px" height="25px" src="http://localhost/artphilic/images/profile_pic/'.$key->username.'.jpg"></li>';
             }
             return $output;

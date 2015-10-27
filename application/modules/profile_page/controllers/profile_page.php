@@ -13,6 +13,7 @@ class Profile_page extends MX_Controller {
 		$id=$this->uri->segment(3);
 		$following=$this->mdl_following->data($id);
 		$data['query']=$this->mdl_profile_page->data($following);
+		$data['user_pic']=$this->mdl_profile_page->get_user_data($_SESSION['username']);
 		$this->load->view('main_page',$data);
 	}
 	 public function upload_text(){

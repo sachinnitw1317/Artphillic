@@ -13,7 +13,7 @@ if($query->num_rows()>0){
     $percent_one=round($key->one/$sum * 100);
     $rate=($key->five*5 + $key->four*4 + $key->three*3 + $key->two*2 + $key->one)/($sum);
     $star=floor($rate);
- 
+      //  print_r($rating);
              echo '<div class="row">
         <div class="col-xs-24 col-md-24">
             
@@ -218,13 +218,14 @@ else{
     $current_rate=0;
 }
 
+
  ?>
 
  <div class="row" style="text-align:center">
  <?php
   if($this->uri->segment(1)!="profile_page"){
              echo ' <h4 style="text-align:center;">would you like to rate him</h4>
-             <input type="hidden" class="rating" value="<?php echo $current_rate ?>" />';
+             <input type="hidden" class="rating" value="'.$current_rate.'" />';
     }
 ?>
  </div>

@@ -3,15 +3,23 @@
   <div id="main"><!--main begin-->
         <div class="card hovercard">
             <div class="card-background">
-                <img id="photo" title="" src="<?php echo base_url(); ?>/images/profile_pic/<?php echo $_SESSION['username']; ?>.jpg" />
+                <img id="photo" title="" src="<?php echo base_url(); ?>/images/profile_pic/<?php echo $user_pic ?>" />
            </div>
             <div class="useravatar">
-              <a href="<?php echo base_url(); ?>/images/profile_pic/<?php echo $_SESSION['username']; ?>.jpg" title="Name" data-gallery>
-                <img alt="" src="<?php echo base_url(); ?>/images/profile_pic/<?php echo $_SESSION['username']; ?>.jpg" ></a>
+              <a href="<?php echo base_url(); ?>/images/profile_pic/<?php echo $user_pic?>" title="Name" data-gallery>
+                <img alt="" src="<?php echo base_url(); ?>/images/profile_pic/<?php echo $user_pic ?>" ></a>
             </div>
-            <div class="card-info"> <span class="card-title"></span>
+            <div class="card-info">
             </div>
         </div> 
+        <div class="row">
+          <form action="<?php echo base_url()?>profile_pic/upload_pic" method="post" enctype="multipart/form-data">
+          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+             <input type="file" name="fileToUpload" id="fileToUpload">
+          </div>
+              <input type="submit" value="Change pic" name="submit">
+          </form>
+        </div>
         <ul class="nav nav-justified nav-pills">
            <li class="active"><a href="#ifeed" data-toggle="tab">Posts</a></li>
            <li ><a href="#iphot" data-toggle="tab">Photos</a></li>

@@ -16,6 +16,17 @@ class Mdl_my_followers extends CI_Model {
         $data = $this->db->get('user_post');
         return $data;
     }
+    function get_user_data($username){
+     $this->db->where('username',$username);
+        $user=$this->db->get('users')->row();
+        if($user->pic!="0"){
+            $pic=$user->pic;
+        }
+        else{
+            $pic="default.jpg";
+        }
+        return $pic;
+    }
     function check_user($username){
         $query = $this->db->get_where('users', array('username' => $username));
         if($query->num_rows()==1){

@@ -6,7 +6,7 @@ foreach ($query->result() as $key) {
 echo '<div class="row post_box" >
 			<div class="col-md-3">
 			<br>
-				<img src="'.base_url().'/images/profile_pic/'.$key->posted_by.'.jpg" class="img-circle" alt="profile_pic" width="60px" height="60px" >
+				<img src="'.base_url().'/images/profile_pic/'.$user_pic.'" class="img-circle" alt="profile_pic" width="60px" height="60px" >
 			</div>
 			<div class="col-md-20">
 				<br>

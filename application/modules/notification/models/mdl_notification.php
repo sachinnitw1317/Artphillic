@@ -18,13 +18,34 @@ class Mdl_notification extends CI_Model {
         $data = $this->db->get('user_post');
       if($data->num_rows()>0){
             foreach ($data->result() as $key) {
+                $this->db->where('username',$key->posted_by);
+                $user=$this->db->get('users')->row();
+                if($user->pic!="0"){
+                    $pic=$user->pic;
+                }
+                else{
+                    $pic="default.jpg";
+                }
+
                $output.='<li id="od"><a href="http://localhost/artphilic/profile_page/load_user/'.$key->posted_by.'">';
-               $output.='<img  alt="profile_pic" width="30px" height="30px" src="http://localhost/artphilic/images/profile_pic/'.$key->posted_by.'.jpg">';
+               $output.='<img width="30px" height="30px" src="http://localhost/artphilic/images/profile_pic/'.$pic.'">';
                $output.=''.$key->posted_by.' posted on profile page</li>';
 
             }
             return $output;
         }
+    }
+
+    function get_user_data($username){
+     $this->db->where('username',$username);
+        $user=$this->db->get('users')->row();
+        if($user->pic!="0"){
+            $pic=$user->pic;
+        }
+        else{
+            $pic="default.jpg";
+        }
+        return $pic;
     }
 }
        /* $query=$this->db->get('users');

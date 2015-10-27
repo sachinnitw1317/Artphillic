@@ -14,10 +14,18 @@ class Following extends MX_Controller {
 		}
 		else
 		$id=$this->session->userdata('username');
-	
+		$data['user_pic']=$this->mdl_following->get_user_data($id);
 		$data['query']=$this->mdl_following->data($id);
+		$data['CI']=$this;
 		$this->load->view('following',$data);
 
+	}
+	public function get_pic($value)
+	{
+		$this->load->model('mdl_following');
+		$pic=$this->mdl_following->get_user_data($value);
+		return $pic;
+		
 	}
 	public function auto(){
 		$this->load->model('mdl_following');

@@ -17,7 +17,7 @@ class Rating extends MX_Controller {
 		}
 		$data['rating']=$this->mdl_rating->get_user_rating($username);
 		$data['query']=$this->mdl_rating->data($username);
-		$this->load->view('main_page',$data);
+		$this->load->view('cart_products',$data);
 	}
 	 public function upload_text(){
 	 	$rating=$_POST['post_rate'];

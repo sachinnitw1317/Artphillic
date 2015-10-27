@@ -71,38 +71,33 @@ class Mdl_rating extends CI_Model {
                 $key->one=$key->one+1;
            }
 
-          if($rate==5){
+          if($rate==5 &&  $key->five!=0){
                $key->five=$key->five-1;
            }
-           else if($rate==4){
+           else if($rate==4 && $key->four!=0){
                 $key->four=$key->four-1;
            }
-           else if($rate==3){
+           else if($rate==3 && $key->three!=0){
                 $key->three=$key->three-1;
            }
-            else if($rate==2){
+            else if($rate==2 && $key->two!=0){
                 $key->two=$key->two-1;
            }
-            else if($rate==1){
+            else if($rate==1 && $key->one!=0){
                 $key->one=$key->one-1;
            }
            
 
            $sum=$key->one + $key->two + $key->three + $key->four + $key->five;
-           if($sum==0)
-               $sum=1;
-            $u_rating=($key->five*5 + $key->four*4 + $key->three*3 + $key->two*2 + $key->one)/($sum);
-            $this->db->where('username',$user);
-            $u_user=$this->db->get('users');
-            foreach ($u_user as $u_key ) {
-              $u_key->rating=$u_rating;
-            }
-            $this->db->where('username',$user);
-            $this->db->update('users',$u_user);
-
-
-            $this->db->where('username',$user);
-            $this->db->update('user_rating',$key);
+          
+          $u_rating=($key->five*5 + $key->four*4 + $key->three*3 + $key->two*2 + $key->one)/($sum);
+          $this->db->where('username',$user);
+          $u_user=$this->db->get('users')->row();
+          $u_user->rating=$u_rating;
+          $this->db->where('username',$user);
+          $this->db->update('users',$u_user);
+          $this->db->where('username',$user);
+          $this->db->update('user_rating',$key);
          }
       }
       else{
@@ -128,30 +123,27 @@ class Mdl_rating extends CI_Model {
                $key->one=$key->one+1;
           }
 
-         if($rate==5){
-              $key->five=$key->five-1;
-          }
-          else if($rate==4){
-               $key->four=$key->four-1;
-          }
-          else if($rate==3){
-               $key->three=$key->three-1;
-          }
-           else if($rate==2){
-               $key->two=$key->two-1;
-          }
-           else if($rate==1){
-               $key->one=$key->one-1;
-          }
+         if($rate==5 &&  $key->five!=0){
+               $key->five=$key->five-1;
+           }
+           else if($rate==4 && $key->four!=0){
+                $key->four=$key->four-1;
+           }
+           else if($rate==3 && $key->three!=0){
+                $key->three=$key->three-1;
+           }
+            else if($rate==2 && $key->two!=0){
+                $key->two=$key->two-1;
+           }
+            else if($rate==1 && $key->one!=0){
+                $key->one=$key->one-1;
+           }
          $sum=$key->one + $key->two + $key->three + $key->four + $key->five;
-         if($sum==0)
-             $sum=1;
+          
           $u_rating=($key->five*5 + $key->four*4 + $key->three*3 + $key->two*2 + $key->one)/($sum);
           $this->db->where('username',$user);
-          $u_user=$this->db->get('users');
-          foreach ($u_user as $u_key ) {
-            $u_key->rating=34;
-          }
+          $u_user=$this->db->get('users')->row();
+          $u_user->rating=$u_rating;
           $this->db->where('username',$user);
           $this->db->update('users',$u_user);
 

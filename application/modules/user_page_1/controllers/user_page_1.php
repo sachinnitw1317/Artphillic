@@ -17,6 +17,7 @@ class User_page_1 extends MX_Controller {
 		$id=$this->session->userdata('username');
 	
 		//$following=$this->mdl_following->data($id);
+		$data['user_pic']=$this->mdl_user_page_1->get_user_data($id);
 		$data['query']=$this->mdl_user_page_1->data($id);
 		$this->load->view('main_page',$data);
 	}

@@ -9,7 +9,7 @@ foreach ($query->result() as $key) {
 
 	echo '<div class="col-sm-6 col-md-6">
 	            <a href="http://localhost/artphilic/profile_page/load_user/'.$key->username.'">
-			    <img src="'.base_url().'/images/profile_pic/'.$key->username.'.jpg" alt="image" width="100%" height="50px" style="padding:4px;">
+			    <img src="'.base_url().'/images/profile_pic/'.$CI->get_pic($key->username).'" alt="image" width="100%" height="50px" style="padding:4px;">
 			    </a>
 	    </div>';
 }

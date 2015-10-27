@@ -16,6 +16,7 @@ class My_followers extends MX_Controller {
 			$id=$_SESSION['username'];
 		}
 		$following=$this->mdl_following->data($id);
+		$data['user_pic']=$this->mdl_my_followers->get_user_data($id);
 		$data['query']=$this->mdl_my_followers->data($following);
 		$this->load->view('main_page',$data);
 	}
