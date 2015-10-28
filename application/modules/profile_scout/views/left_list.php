@@ -1,54 +1,54 @@
-	<div class="col-xs-24 col-sm-24 col-md-5 nopadding">
-		<div class="list-group nopadding" id="left_details">
-				  <a href="#" class="list-group-item" data-toggle="collapse" data-target="#about_me" style="border: 0px solid transparent;"><div id="left_image"><img src="<?php echo base_url(); ?>/images/flaticon/details/about.png"></div> About me <img src="<?php echo base_url(); ?>/images/flaticon/left/plus.png"></a>
-				  <div id="about_me" class="collapse">
-					  load something from php
-				  </div>
-				  <a href="#" class="list-group-item" data-toggle="collapse" data-target="#expirence" style="border: 0px solid transparent;"><div id="left_image"><img src="<?php echo base_url(); ?>/images/flaticon/details/experience.png"></div> Expirence <img src="<?php echo base_url(); ?>/images/flaticon/left/plus.png"></a>
-				   <div id="expirence" class="collapse">
-					  load something from php
-				  </div>
-				  <a href="#" class="list-group-item" data-toggle="collapse" data-target="#language"style="border: 0px solid transparent;"><div id="left_image"><img src="<?php echo base_url(); ?>/images/flaticon/details/language.png"></div> Language <img src="<?php echo base_url(); ?>/images/flaticon/left/plus.png"></a>
-				   <div id="language" class="collapse">
-					  load something from php
-				  </div>
-				  <a href="#" class="list-group-item" data-toggle="collapse" data-target="#current_city" style="border: 0px solid transparent;"><div id="left_image"><img src="<?php echo base_url(); ?>/images/flaticon/details/current.png"></div> Current city <img src="<?php echo base_url(); ?>/images/flaticon/left/plus.png"></a>
-				   <div id="current_city" class="collapse">
-					  load something from php
-				  </div>
-				  <a href="#" class="list-group-item" data-toggle="collapse" data-target="#hobby" style="border: 0px solid transparent;"><div id="left_image"><img src="<?php echo base_url(); ?>/images/flaticon/details/hobby.png"></div> Hobby <img src="<?php echo base_url(); ?>/images/flaticon/left/plus.png"></a>
-				   <div id="hobby" class="collapse">
-					  load something from php
-				  </div>
-				   <a href="#" class="list-group-item" data-toggle="collapse" data-target="#home" style="border: 0px solid transparent;"><div id="left_image"><img src="<?php echo base_url(); ?>/images/flaticon/details/hometown.png"></div> Hometown <img src="<?php echo base_url(); ?>/images/flaticon/left/plus.png"></a>
-				  <div id="home" class="collapse">
-					  load something from php
-				  </div>
-				  <a href="#" class="list-group-item" data-toggle="collapse" data-target="#qualification" style="border: 0px solid transparent;"><div id="left_image"><img src="<?php echo base_url(); ?>/images/flaticon/details/qualification.png"></div> Qualification <img src="<?php echo base_url(); ?>/images/flaticon/left/plus.png"></a>
-				   <div id="qualification" class="collapse">
-					  load something from php
-				  </div>
-				  <a href="#" class="list-group-item" data-toggle="collapse" data-target="#music"style="border: 0px solid transparent;"><div id="left_image"><img src="<?php echo base_url(); ?>/images/flaticon/details/music.png"></div> Music<img src="<?php echo base_url(); ?>/images/flaticon/left/plus.png"></a>
-				   <div id="mosic" class="collapse">
-					  load something from php
-				  </div>
-				  <a href="#" class="list-group-item" data-toggle="collapse" data-target="#movie" style="border: 0px solid transparent;"><div id="left_image"><img src="<?php echo base_url(); ?>/images/flaticon/details/movie.png"></div> Movies <img src="<?php echo base_url(); ?>/images/flaticon/left/plus.png"></a>
-				   <div id="movie" class="collapse">
-					  load something from php
-				  </div>
-				  <a href="#" class="list-group-item" data-toggle="collapse" data-target="#sport" style="border: 0px solid transparent;"><div id="left_image"><img src="<?php echo base_url(); ?>/images/flaticon/details/sport.png"></div>Sport<img src="<?php echo base_url(); ?>/images/flaticon/left/plus.png"></a>
-				   <div id="sport" class="collapse">
-					  load something from php
-				  </div>
-				  <a href="#" class="list-group-item" data-toggle="collapse" data-target="#dance" style="border: 0px solid transparent;"><div id="left_image"><img src="<?php echo base_url(); ?>/images/flaticon/details/dance.png"></div>Dance<img src="<?php echo base_url(); ?>/images/flaticon/left/plus.png"></a>
-				   <div id="dance" class="collapse">
-					  load something from php
-				  </div>
-				  <a href="#" class="list-group-item" data-toggle="collapse" data-target="#group" style="border: 0px solid transparent;"><div id="left_image"><img src="<?php echo base_url(); ?>/images/flaticon/details/groups.png"></div>Your Groups<img src="<?php echo base_url(); ?>/images/flaticon/left/plus.png"></a>
-				   <div id="group" class="collapse">
-					  load something from php
-				  </div>
+<div class="col-xs-11 col-sm-11 col-md-11 col-md-offset-1 col-lg-11">
+	<h2 style="border-bottom:1px solid lightgrey;padding-left: 9px;">Top&nbsp Feed</h2>
+	<div class="row">
+		<form action="" method="POST" class="form-horizontal" role="form">
+			<div class="form-group">
+				<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+					<ul class="list-inline">
+						<li class="list-group-item" style="border:none">
+							<img src="http://localhost/artphilic/images/flaticon/upload/post.png" class="img-responsive" alt="Image">
+						</li>
+						<li class="list-group-item" style="border:none">
+							<img src="http://localhost/artphilic/images/flaticon/upload/picture.png" class="img-responsive" alt="Image">
+						</li>
+						<li class="list-group-item" style="border:none">
+							<img src="http://localhost/artphilic/images/flaticon/upload/video.png" class="img-responsive" alt="Image">
+						</li>
+					</ul>	
+				</div>
+				<label for="" class="col-sm-3" style="margin-top:12px"><big>Sort by</big></label>
+				<div class="col-sm-8 col-sm-offset-1">
+					<select name="" id="input" class="form-control" required="required" style="margin-top:8px">
+						<option value="">painter</option>
+						<option value="">Dancer</option>
+						<option value="">Musician</option>
+						<option value="">Actor</option>
+						<option value="">Director</option>
+						<option value="">Writer</option>
+					</select>
+				</div>
+			</div>
+		</form>
+	</div>	
+	<div class="row">
+		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+			<div class="row">
+				<img src="http://localhost/artphilic/images/login.png" width="60px" height="60px" style="border:1px solid lightgrey;" 
+				 class="img-circle" alt="Image">
+				<span>&nbspArtphillic</span>
+			</div>
+			 <div class="row">
+			  <h5>number of likes:<mark>70</mark></h5>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<img src="http://localhost/artphilic/images/login.png" class="img-responsive" alt="Image" style="border:1px solid lightgrey;border-radius:8px;">
+		</div>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		<button type="button" class="btn btn-danger"  style="margin-left:35px;">Ping</button>
 		</div>
 	</div>
-
-<!-- two div are required more for completion-->
+</div>
+<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+	
+</div>

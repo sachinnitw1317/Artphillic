@@ -1,5 +1,5 @@
 <div class="col-xs-24 col-sm-24 col-md-6" style="padding-left:30px;">
-	<div class="row" style="box-shadow:3px 3px 10px lightgrey ;margin-bottom: 20px;padding-bottom: 2px;">
+	<div class="row" style="box-shadow:3px 3px 10px lightgrey ;margin-bottom: 20px;padding-bottom: 2px;background-color:#FFF;">
 		<img src="<?php echo base_url(); ?>images/login.png" class="img-responsive" alt="Image" style="border-bottom:1px double lightgrey;height: 140px;width: 100%;">
 		 <img class="img-circle" alt="profile_pic"  id="profile_pic" style="border:4px double teal"
 		 src="<?php echo base_url(); ?>/images/profile_pic/<?php echo $_SESSION['username']; ?>.jpg"/>
