@@ -11,17 +11,19 @@
 		<link href="<?php echo base_url(); ?>css/user_post.css" rel="stylesheet">
 		<link href="<?php echo base_url(); ?>css/cart.css" rel="stylesheet">
 		<link href="<?php echo base_url(); ?>css/profile_page.css" rel="stylesheet">
-		<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href="<?php echo base_url(); ?>css/bootstrap-rating.css" rel="stylesheet">
 		<script src="<?php echo base_url(); ?>js/profile_page.js"></script>
 		<script src="<?php echo base_url(); ?>js/jquery.min.js"></script>
 		<script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
 		<script src="<?php echo base_url(); ?>js/search.js"></script>
 		<script src="<?php echo base_url(); ?>js/bootstrap-filestyle.min.js"></script>
+		<script src="<?php echo base_url(); ?>js/bootstrap-rating.js"></script>
 	</head>
 	<body id="main_body" style="font-family:lato;font-size:14px;">
 	<div class="container-fluid nopadding"><!--container    -->
 	 <div class="row"><!--row    -->
 	 <!--navbar    -->
+	 
 	 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="height:60px;padding-bottom: 0px;margin-bottom: 0px;">
 	 		<!-- Brand and toggle get grouped for better mobile display -->
 	 		<div class="navbar-header">
@@ -108,7 +110,6 @@
 	 $(document).ready(function()
 	 {
 	     $(".img-circle").error(function(){
-	     	alert("error");
 	         $(this).attr('src', 'http://localhost/artphilic/images/profile_pic/default.png');
 	     });
 	 });

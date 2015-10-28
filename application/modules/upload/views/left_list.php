@@ -1,23 +1,9 @@
- <div class="row">
-<div class="col-md-6">
-All Your Stuff:<br>
-<?php 
-$tem=$_SESSION['username'];
-$dbc=mysqli_connect('localhost','root','','galla') or die('error');
-$query="SELECT * FROM gallery WHERE artist='$tem'";
-$result=mysqli_query($dbc,$query);
-define('GALLERY','gallery/');
-while($row=mysqli_fetch_assoc($result))
-{
-	$id=$row['id'];
-	$path=GALLERY.$row['artist'].$row['pic'];
-	?>
-
-	<div id="show_case"><a href="<?php echo "upload_gallery.php?eid=".$id ?>"><?php
-	?><img src="<?php echo $path?>" style="/* height:100px; */width: 90%;"><br><?php
-	echo $row['name']."</a>";?></div><?php
-}	
- 
-?><a href="upload_gallery.php">Upload a new art</a>
+<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+	<div class="row">
+		<h3 style="text-align:center;">All your stuff</h3>
+		<h5 style="margin-left:5px;"><a href="">Upload new!</a></h5>
+	</div>
+	<div class="row">
+		
+	</div>
 </div>
-<!-- two div are required more for completion-->

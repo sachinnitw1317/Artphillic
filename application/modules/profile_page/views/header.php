@@ -16,7 +16,7 @@
 		<script src="<?php echo base_url(); ?>js/jquery.min.js"></script>
 		<script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
 		<script src="<?php echo base_url(); ?>js/search.js"></script>
-		<script src="<?php echo base_url(); ?>js/bootstrap-filestyle.min.js"></script>
+		<script src="<?php echo base_url(); ?>js/bootstrap-filestyle.js"></script>
 		<script src="<?php echo base_url(); ?>js/bootstrap-rating.js"></script>
 	</head>
 	<body id="main_body" style="font-family:lato;font-size:14px;">

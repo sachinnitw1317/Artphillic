@@ -9,11 +9,8 @@ class comments extends MX_Controller {
 
 	public function get_data(){	
 		$this->load->model('mdl_comments');
-		/*$username=$_SESSION['username'];*/
-		$id=$_GET['q'];//change this id URI segment 3
+		$id=$_GET['q'];
 		$data['query_comments']=$this->mdl_comments->get_result($id);
-		// $data['username']=$username;
-		// $data['id']=$id;
 		$this->load->view('comments_text',$id);
 	}
 

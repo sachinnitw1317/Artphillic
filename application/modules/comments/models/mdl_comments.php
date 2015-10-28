@@ -11,8 +11,6 @@ class Mdl_comments extends CI_Model {
     {
         $output="";
         $this->db->where('id',$id);
-       /* $this->db->where(array('from' => $from,'to'=>$to));
-        $this->db->or_where(array('from' => $to,'to'=>$from));*/
         $this->db->order_by('time','asc');
         $data = $this->db->get('comments');
         return $data;
