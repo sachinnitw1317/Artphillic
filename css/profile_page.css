@@ -21,10 +21,10 @@ border-bottom: 1px solid black;
 border-right: 1px solid black;
 }
 */
-.list-group>.list-group-item{
+/*.list-group>.list-group-item{
     margin: 0px;
     border: 0px;
-}
+}*/
 
 .double li{
     padding: 0px;
